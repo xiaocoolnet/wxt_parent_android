@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <!--八个按钮白色底-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="#ffffff"
+        android:layout_marginTop="6dp">
+        <!--第一行四个键-->
+
+        <!--园区介绍图片-->
+        <ImageView
+            android:id="@+id/web_introduce"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_yuanqujieshao"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="28dp"
+            />
+        <!--园区介绍文字-->
+        <TextView
+            android:text="园区介绍"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="62dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+        <!--教师风采-->
+        <ImageView
+            android:id="@+id/web_teacher_style"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_jiaoshifengcai"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="118dp"
+            />
+        <!--教师风采文字-->
+        <TextView
+            android:text="教师风采"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="112.5dp"
+            android:layout_marginTop="62dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+
+        <!--今日食谱-->
+        <ImageView
+            android:id="@+id/web_recipes"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_jinrishipu"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="213dp"
+            />
+        <!--今日食谱文字-->
+        <TextView
+            android:text="今日食谱"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="208.5dp"
+            android:layout_marginTop="62dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+
+        <!--宝宝秀场-->
+        <ImageView
+            android:id="@+id/web_baby_show"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_baobaoxiuchang"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="303dp"
+            />
+        <!--宝宝秀场文字-->
+        <TextView
+            android:text="宝宝秀场"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="62dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+
+
+        <!--第二行四个键-->
+
+        <!--校园招聘图片-->
+        <ImageView
+            android:id="@+id/web_recruit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_xiaoyuanzhaopin"
+            android:layout_marginTop="86dp"
+            android:layout_marginLeft="28dp"
+            />
+        <!--校园招聘文字-->
+        <TextView
+            android:text="校园招聘"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="135dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+        <!--兴趣班-->
+        <ImageView
+            android:id="@+id/web_class"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_xingquban"
+            android:layout_marginTop="86dp"
+            android:layout_marginLeft="118dp"
+            />
+        <!--兴趣班文字-->
+        <TextView
+            android:text="兴趣班"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="135dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+
+        <!--在线请假-->
+        <ImageView
+            android:id="@+id/web_leave"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_zaixianqingjia"
+            android:layout_marginTop="86dp"
+            android:layout_marginLeft="213dp"
+            />
+        <!--在线请假文字-->
+        <TextView
+            android:text="在线请假"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="208.5dp"
+            android:layout_marginTop="135dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+
+        <!--入学报名-->
+        <ImageView
+            android:id="@+id/main_kaoqin"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/web_btn_ruxuebaoming"
+            android:layout_marginTop="86dp"
+            android:layout_marginLeft="303dp"
+            />
+        <!--入学报名文字-->
+        <TextView
+            android:text="入学报名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="135dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:id="@+id/news_list_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9be5b4"
+            android:gravity="center"
+            android:text="通知详情"
+            android:textColor="@color/title_color"
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:id="@+id/up_jiantou"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_exit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_fanhui" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="horizontal" >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10dip"
+                    android:id="@+id/item_head"
+                    android:src="@drawable/default_square" />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout_profession_circle_item"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+
+                        <TextView
+                            android:id="@+id/item_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingRight="5dip"
+                            android:text="少东家"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/item_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/activity_size_10"
+                            android:textSize="13sp"
+                            android:text="20:20"
+                            android:textColor="@color/color_gray2"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout_profession_circle_item_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+                        <TextView
+                            android:id="@+id/item_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="朋友圈测试"
+                            android:textColor="@color/zsq_text_gray_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/item_information"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="100dp"
+                android:contentDescription="@string/app_name"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/katong" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/zsq_bg2_color"></View>
+
+            <RelativeLayout
+                android:id="@+id/tecxt_homwork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/activity_size_10"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/myhomework_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="周一 家庭作业"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/myhomework_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/myhomework_title"
+                    android:layout_centerVertical="true"
+                    android:text="由于今天天气原因"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_gray" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/parent_warn_img"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="120dp"
+                    android:visibility="gone"
+                    />
+                <cn.xiaocool.wxtparent.ui.NoScrollGridView
+                    android:id="@+id/parent_warn_img_gridview"
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_size_10"
+                    android:listSelector="@color/white"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+                </cn.xiaocool.wxtparent.ui.NoScrollGridView>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/zsq_bg_color"
+                android:layout_marginTop="10dp"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/zongfa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/thb_orange"
+                    android:text="总发0"/>
+                <TextView
+                    android:id="@+id/yidu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/thb_orange"
+                    android:text="已阅读0"/>
+                <TextView
+                    android:id="@+id/weidu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/thb_orange"
+                    android:text="未读0"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

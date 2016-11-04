@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/me_service"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:layout_marginTop="0.5dp"
+    android:background="@color/white" >
+    <TextView
+        android:id="@+id/kefu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:text="客服热线"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/kefu"
+        android:layout_marginLeft="10dip"
+        android:text=""
+        android:textColor="@color/zsq_text_gray_color"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/find_goto"
+        android:contentDescription="@string/app_name"/>
+
+</RelativeLayout>

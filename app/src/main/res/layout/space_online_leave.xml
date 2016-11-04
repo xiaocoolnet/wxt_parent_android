@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/title_bg_color"
+            android:gravity="center"
+            android:text="@string/web_leave_title"
+            android:textColor="@color/whilte"
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:id="@+id/up_jiantou"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/left_jiantou"
+                android:id="@+id/btn_exit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <cn.xiaocool.wxtparent.ui.ReboundScrollView
+        android:id="@+id/scrollView_activity_me"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:fillViewport="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/gray"
+            >
+            <!--标题下面波浪-->
+            <include layout="@layout/space_online_leave_title1"></include>
+            <!--老师姓名-->
+            <include layout="@layout/space_online_leave_title0"></include>
+            <!--老师头像名称-->
+            <include layout="@layout/space_online_leave_title2"></include>
+            <include layout="@layout/space_online_leave_title3"></include>
+            <include layout="@layout/space_online_leave_title4"></include>
+
+
+        </LinearLayout>
+
+    </cn.xiaocool.wxtparent.ui.ReboundScrollView>
+
+</LinearLayout>

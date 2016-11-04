@@ -1,0 +1,268 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/title_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <cn.xiaocool.wxtparent.ui.RoundImageView
+
+                android:id="@+id/iv_profession_circle_item_head"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:layout_margin="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/default_square" />
+
+            <ImageView
+                android:id="@+id/iv_profession_circle_item_ka"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_alignBottom="@+id/iv_profession_circle_item_head"
+                android:layout_alignRight="@+id/iv_profession_circle_item_head"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_ka" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_profession_circle_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" >
+
+                <!--<View-->
+                    <!--android:layout_width="1dip"-->
+                    <!--android:layout_height="20dip"-->
+                    <!--android:layout_alignBottom="@+id/tv_profession_circle_item_name"-->
+                    <!--android:layout_toRightOf="@+id/tv_profession_circle_item_name"-->
+                    <!--android:background="@color/black" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_profession_circle_item_post"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingLeft="5dip"-->
+                    <!--android:layout_alignBottom="@+id/tv_profession_circle_item_name"-->
+                    <!--android:layout_toRightOf="@+id/tv_profession_circle_item_name"-->
+                    <!--android:hint="@string/tv_profession_circle_item_post"-->
+                     <!--/>-->
+
+                <TextView
+                    android:id="@+id/tv_profession_circle_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="5dip"
+                    android:text="@string/tv_profession_circle_item_name"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_profession_circle_item_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tv_profession_circle_item_label"
+                android:padding="3dip" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_profession_circle_item_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tv_profession_circle_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_profession_circle_item_content"
+                    android:textColor="#404040"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_profession_circle_item_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#f4f5f7"
+                android:layout_marginRight="10dip" >
+
+                <ImageView
+                    android:id="@+id/iv_profession_circle_item_information"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_margin="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/default_square" />
+
+                <TextView
+                    android:id="@+id/tv_profession_circle_item_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dip"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+
+            <cn.xiaocool.wxtparent.ui.NoScrollGridView
+                android:id="@+id/gridView_profession_circle_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:layout_marginRight="10dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_marginRight="10dip" >
+
+                <TextView
+                    android:id="@+id/tv_profession_cicle_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:textSize="10sp"
+                    />
+
+                <include
+                    android:id="@+id/include_profession_circle_item_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    layout="@layout/profession_circle_item_share" />
+
+                <include
+                    android:id="@+id/include_profession_circle_item_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/include_profession_circle_item_share"
+                    layout="@layout/profession_circle_item_comment" />
+
+                <include
+                    android:id="@+id/include_profession_circle_item_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/include_profession_circle_item_comment"
+                    layout="@layout/profession_circle_item_praise" />
+
+                <include
+                    android:id="@+id/include_profession_circle_item_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/include_profession_circle_item_praise"
+                    layout="@layout/profession_circle_item_delete" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_profession_circle_item_praise"
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#f4f5f7" >
+
+        <RelativeLayout
+            android:layout_width="40.0dip"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical" >
+
+            <ImageView
+                android:id="@+id/iv_profession_circle_item_praise_heart"
+                android:layout_width="12dip"
+                android:layout_height="12dip"
+                android:background="@drawable/icon_praise_blue"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_profession_circle_item_praise_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:textColor="#7888a9"
+            android:textSize="13.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_profession_circle_item_discuss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#f4f5f7" >
+
+        <RelativeLayout
+            android:layout_width="40.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="right|top" >
+
+            <ImageView
+                android:layout_width="12dip"
+                android:layout_height="12dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_comment_bule" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <cn.xiaocool.wxtparent.ui.NoScrollListView
+                 android:id="@+id/listView_profession_circle_item_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:divider="@null" />
+
+            <TextView
+                android:id="@+id/tv_profession_circle_item_more_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="@string/tv_profession_circle_item_more_discuss"
+                android:textColor="#7888a9"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

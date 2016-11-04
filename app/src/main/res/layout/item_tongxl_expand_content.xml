@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <cn.xiaocool.wxtparent.ui.RoundImageView
+            android:id="@+id/image_user"
+            android:layout_width="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="50dp"
+            android:src="@drawable/main_xiaoxi" />
+
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:layout_alignTop="@+id/image_user"
+            android:layout_marginStart="29dp"
+            android:layout_toEndOf="@+id/image_user"
+            android:layout_toRightOf="@+id/image_user"
+            android:text="用户姓名"
+            android:textSize="20dp" />
+
+        <TextView
+            android:textColor="@color/green"
+            android:id="@+id/tv_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_user_name"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/image_user"
+            android:text="13456789" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    <!--标题下面的布局-->
+
+    <!-- 第一行四个按钮： 我收到的，我发出的、通讯录、作业-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <!--第一个按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:id="@+id/space_my_receive_news">
+            <!-- 图片-->
+            <ImageView
+                android:layout_width="@dimen/activity_size_50"
+                android:layout_height="@dimen/activity_size_50"
+                android:background="@drawable/main_xiaoxi"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_10"/>
+            <!--文字-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/space_news_received"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_5"
+                />
+        </LinearLayout>
+
+        <!--第二个按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:id="@+id/space_my_send_news">
+            <!-- 图片-->
+            <ImageView
+                android:layout_width="@dimen/activity_size_50"
+                android:layout_height="@dimen/activity_size_50"
+                android:background="@drawable/main_xiaoxi"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_10"/>
+            <!--文字-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/space_news_send"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_5"
+                />
+        </LinearLayout>
+
+        <!--第三个按钮-->
+        <LinearLayout
+            android:id="@+id/space_my_addresslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!-- 图片-->
+            <ImageView
+                android:layout_width="@dimen/activity_size_50"
+                android:layout_height="@dimen/activity_size_50"
+                android:background="@drawable/main_xiaoxi"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_10"/>
+            <!--文字-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/space_news_address"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_5"
+                />
+        </LinearLayout>
+
+        <!--第四个按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:id="@+id/space_my_homework">
+            <!-- 图片-->
+            <ImageView
+                android:layout_width="@dimen/activity_size_50"
+                android:layout_height="@dimen/activity_size_50"
+                android:background="@drawable/main_xiaoxi"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_10"/>
+            <!--文字-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/space_news_homework"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_size_5"
+                />
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

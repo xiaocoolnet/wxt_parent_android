@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/parent_warn_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="张思强"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="16sp"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="16sp"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/thb_orange"
+                        android:text="未回复"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/parent_warn_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:text="我好饿"
+                android:textColor="@color/list_content_color"/>
+
+            <ImageView
+                android:id="@+id/parent_warn_img"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:layout_height="300dp"
+                android:visibility="gone"
+                />
+            <cn.xiaocool.wxtparent.ui.NoScrollGridView
+                android:id="@+id/parent_warn_img_gridview"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_size_10"
+                android:listSelector="@color/white"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp">
+
+            </cn.xiaocool.wxtparent.ui.NoScrollGridView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <ImageView
+                   android:id="@+id/from_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_fasong"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parent_warn_from"
+                    android:textColor="@color/list_time_color"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/from_img"
+                    android:text="王老师"
+                    android:layout_marginLeft="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parent_warn_time"
+                    android:layout_alignParentRight="true"
+                    android:textSize="13sp"
+                    android:layout_marginRight="@dimen/activity_size_10"
+                    android:text="12:00"
+                    android:textColor="@color/list_time_color"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/news_group_comment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/zsq_bg_color"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="horizontal" >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="35.0dip"
+                    android:layout_height="35.0dip"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/item_head"
+                    android:src="@drawable/default_square" />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout_profession_circle_item"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+
+                        <TextView
+                            android:id="@+id/item_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingRight="5dip"
+                            android:text="少东家"
+                            android:textSize="14sp"
+                            android:textColor="@color/list_title_color"/>
+
+                        <TextView
+                            android:id="@+id/item_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/activity_size_10"
+                            android:textSize="12sp"
+                            android:text="20:20"
+                            android:textColor="@color/list_time_color"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout_profession_circle_item_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+                        <TextView
+                            android:id="@+id/item_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="朋友圈测试"
+                            android:textColor="@color/list_remark_color"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

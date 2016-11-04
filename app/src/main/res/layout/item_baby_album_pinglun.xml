@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+        <cn.xiaocool.wxtparent.ui.RoundImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/default_square"
+            android:id="@+id/baby_album_PL_item_iv1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打哈哈"
+        android:textSize="15sp"
+        android:id="@+id/baby_album_PL_item_tv1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignTop="@+id/baby_album_PL_item_iv1"
+        android:layout_toRightOf="@+id/baby_album_PL_item_iv1"
+        android:layout_toEndOf="@+id/baby_album_PL_item_iv1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈打哈哈"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/baby_album_PL_item_iv1"
+        android:layout_alignLeft="@+id/baby_album_PL_item_tv1"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/baby_album_PL_item_iv1"
+        android:layout_toEndOf="@+id/baby_album_PL_item_iv1"
+        android:id="@+id/baby_album_PL_item_tv2" />
+
+
+    <TextView
+        android:id="@+id/baby_album_PL_item_tv3"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="12:30"
+        android:layout_alignTop="@+id/baby_album_PL_item_iv1"
+        android:layout_alignRight="@+id/baby_album_PL_item_tv2"
+        android:layout_alignEnd="@+id/baby_album_PL_item_tv2" />
+
+</RelativeLayout>

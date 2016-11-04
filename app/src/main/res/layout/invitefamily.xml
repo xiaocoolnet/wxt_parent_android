@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/title_bg_color"
+            android:gravity="center"
+            android:text="@string/me_invite_text"
+            android:textColor="@color/whilte"
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:id="@+id/up_jiantou"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/left_jiantou"
+                android:id="@+id/btn_exit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="150dp">
+        <TextView
+            android:id="@+id/invitefamily_tv_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="电话号码："/>
+        <EditText
+            android:id="@+id/invitefamily_et_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/me_invite_phone"
+            android:phoneNumber="true"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/invitefamily_tv_telephone"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/rl_phone">
+        <TextView
+            android:id="@+id/invitefamily_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="家人姓名："/>
+        <EditText
+            android:id="@+id/invitefamily_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/me_invite_name"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/invitefamily_tv_name"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_name">
+        <TextView
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:background="@color/btn_green_pressed"
+            android:layout_toRightOf="@id/view"/>
+        <Button
+            android:id="@+id/btn_besure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_green_pressed"
+            android:layout_toLeftOf="@id/view"
+            android:text="确定"/>
+    </RelativeLayout>
+</RelativeLayout>

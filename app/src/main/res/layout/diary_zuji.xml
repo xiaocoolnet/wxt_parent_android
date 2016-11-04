@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="110dp"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <!--个人足迹-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--透明框-->
+        <TextView
+            android:id="@+id/my_footprint"
+            android:layout_width="138dp"
+            android:layout_height="33dp"
+            android:background="@drawable/diary_toumingbutton"
+            android:textSize="20sp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="9dp"
+            />
+        <!--左边头像-->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/diary_left_touxiang"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="55dp"
+            />
+        <!--左边文字-->
+        <TextView
+            android:id="@+id/diary_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的足迹"
+            android:textSize="15sp"
+            android:layout_alignTop="@+id/my_footprint"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="89dp"
+            android:textColor="#39c368"
+            />
+
+
+
+        <!--透明框-->
+        <ImageView
+            android:id="@+id/diary_touming2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/diary_right_touxiang"
+            android:layout_marginTop="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="132dp"
+            />
+        <!--右边头像-->
+        <TextView
+            android:id="@+id/friend_footprint"
+            android:layout_width="138dp"
+            android:layout_height="33dp"
+            android:background="@drawable/diary_toumingbutton"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="37dp"
+            android:layout_marginTop="9dp"
+            />
+
+        <!--右边文字-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友足迹"
+
+            android:textSize="15sp"
+            android:layout_alignTop="@+id/diary_left_text"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="62dp"
+            android:textColor="#39c368"
+            />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="好久没有发照片了"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#848484"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+        android:id="@+id/diary_xiaotubiao"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:background="@drawable/diary_xiaotubiao"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="5dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/diary_xiaotubiao"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="13sp"
+            android:text="催一下"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

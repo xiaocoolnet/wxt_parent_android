@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.xiaocool.wxtparent">
+
+    <!-- 环信3.0权限 -->
+    <!-- Required -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 环信3.0权限 -->
+
+
+
+
+    <!--极光推送-->
+    <permission
+        android:name="cn.xiaocool.wxtparent.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="cn.xiaocool.wxtparent.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--极光推送-->
+
+
+
+
+
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+ To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
+     option is required to comply with the Google+ Sign-In developer policies
+    -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.hardware.sensor.accelerometer" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".view.WxtApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_new1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".view.update.UpdateService" />
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"/>
+        <activity android:name=".main.LoginActivity" />
+        <activity
+            android:name=".main.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".main.ChatActivity" />
+        <activity
+            android:name=".main.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".main.ForgetPasswordActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".main.SetPasswordActivity" />
+        <activity android:name=".main.ResetPasswordActivity" />
+        <activity
+            android:name=".view.MyBabyActivity"
+            android:label="@string/title_activity_my_baby" />
+        <activity android:name=".main.MeHelpBackActivity" />
+        <activity android:name=".main.SpaceBabyAlbumActivity" />
+        <activity android:name=".main.SpaceClickConfimActivity" />
+        <activity android:name=".main.SpaceClickCoursewareActivity" />
+        <activity android:name=".main.SpaceClickLeaveActivity" />
+        <activity android:name=".main.SpaceClickNewsActivity2" />
+        <activity android:name=".main.NewsContentActivity" />
+        <activity android:name=".main.AnnouContentActivity" />
+        <activity android:name=".main.SpaceClickAnnouActivity" />
+        <activity android:name=".main.SpaceClickTeacherReviewActivity" />
+        <activity android:name=".main.ReviewContentActivity" />
+        <activity android:name=".main.SpaceClickNewsActivity" />
+        <!-- <activity -->
+        <!-- android:name=".main.SpaceContactsActivity"> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".main.SpaceClickRecipesActivity2"> -->
+        <!-- </activity> -->
+        <activity android:name=".main.SpaceClickRecipesActivity" />
+        <activity android:name=".main.SpaceClickRecipesItemActivity" />
+        <activity android:name=".main.WebClickClassActivity" />
+        <activity android:name=".main.WebClickIntroduceActivity" />
+        <activity android:name=".main.WebClickLeaveActivity" />
+        <activity android:name=".main.WebClickRecipesActivity" />
+        <activity android:name=".main.WebClickRecruirActivity" />
+        <activity android:name=".main.WebClickTeacherStyleActivity" />
+        <activity android:name=".main.WebClickAnnouncementActivity" />
+        <activity android:name=".main.WebClickRearingChildActivity" />
+        <!-- 宝宝课程、老师点评、宝宝老师、 -->
+        <activity android:name=".main.SpaceClickClassActivity" />
+        <activity android:name=".main.SpaceClickBabyTeacherActivity" />
+
+        <!-- 点击我的宝宝 -->
+        <activity android:name=".main.MeClickMyBabyActivity" />
+        <activity android:name=".activity.CircleImagesActivity" />
+
+        <!-- 记录体重身高按钮 -->
+        <activity android:name=".main.SpaceClickHeightActivity" />
+        <activity android:name=".main.SpaceClickWeightActivity" />
+        <activity android:name=".main.SpaceClickInputWeightActivity" />
+        <activity android:name=".main.SpaceClickInputHeightActivity" />
+        <!--  -->
+        <activity android:name=".main.SpaceClickClassEventActivity" />
+        <activity android:name=".main.SpaceClickClassSpecificEventActivity" />
+        <activity android:name=".main.WebClickRearingChildSpecificActivity" />
+        <activity android:name=".main.SpaceHappySchoolActivity" />
+        <activity android:name=".main.SpaceHappySchoolSpecificActivity" />
+        <activity android:name=".main.MeClickInviteFamily" />
+        <activity android:name=".main.MeClickInvitedFamilies" />
+        <activity android:name=".main.GenerateQrCodeActivity" />
+        <activity android:name=".main.ResultActivity" />
+        <activity android:name=".main.SpaceFriendsActivity" />
+        <activity android:name=".main.ScanQrCodeActivity" />
+        <activity android:name=".main.UserSettingActivity" />
+        <activity android:name=".main.SpaceClickParentWarnActivity" />
+        <activity android:name=".main.MySendMessageToTeacherActivity" />
+        <activity android:name=".main.SpaceClickSpecificConfirmActivity" />
+        <activity android:name=".main.HotNewsSendActivity" />
+        <activity android:name=".main.HotNewsReceiveActivity" />
+        <activity android:name=".main.Baby_Album_PingLun_Activity" />
+        <activity android:name=".main.Space_homework" />
+        <activity android:name=".main.Homework_Pinglun" />
+        <activity android:name=".main.Homework_pinglun_add" />
+        <activity android:name=".main.Space_tongxunlu" />
+        <activity android:name=".main.ShowImageActivity" />
+        <activity android:name=".main.Annou_Pinglun" />
+        <activity android:name=".main.Annou_pinglun_add" />
+        <activity android:name=".main.ClassEvent_pinglun" />
+        <activity android:name=".main.Web_Introduce_pinglun" />
+        <activity android:name=".main.WebIntroduce_pinglun_add" />
+        <activity android:name=".main.Leave_add_activity" />
+        <activity android:name=".main.Leave_stu_leibiao" />
+        <activity android:name=".main.Leave_tea_liebiao" />
+        <activity android:name=".main.TeacherStyle_Webview" />
+        <activity android:name=".main.WebClickBabyShowActivity" />
+        <activity android:name=".main.WebClickEnrollActivity" />
+        <activity android:name=".main.WebNewsActivity" />
+        <activity android:name=".main.Space_news_xitong" />
+        <activity android:name=".main.Space_news_xitong_content" />
+        <activity android:name=".main.ImgDetailActivity" />
+        <activity android:name=".main.BabyAlbum_Add_Activity" />
+        <activity android:name=".main.Add_ParentWarn" />
+        <activity android:name=".main.ParentWarn_pinglun" />
+        <activity android:name=".main.ClassEvent_Baoming_Activity" />
+        <activity android:name=".main.NewsGroupActivity" />
+        <activity android:name=".main.NewGroupDetailActivity" />
+        <activity android:name=".main.HomeworkDetailActivity" />
+        <activity android:name=".main.BabyInformationActivity" />
+        <activity android:name=".main.ClassEventDetailActivity" />
+        <activity android:name=".main.AnnouncementDetailActivity" />
+        <activity android:name=".main.AddAlbumActivity" />
+        <activity android:name=".main.ApplySchoolActivity" />
+        <activity android:name=".main.ChildStarActivity" />
+        <activity android:name=".main.SpeaceSchoolWebActivity" />
+        <activity android:name=".main.TeacherStyleActivity" />
+        <activity android:name=".main.TeacherInfoWebDetailActivity" />
+        <activity android:name=".main.AddChildActivity" />
+        <activity android:name=".main.FeedbackActivity" />
+        <activity android:name=".main.OnlineCommentActivity" />
+        <activity android:name=".main.QRCODEActivity" />
+        <activity android:name=".main.SwingCardSettingActivity" />
+        <activity android:name=".main.AddTrendActivity" />
+        <activity android:name=".main.WebClickEditActivity" />
+        <activity android:name=".main.MeClickMyParentActivity" />
+        <activity android:name=".main.SelectRelationActivity" />
+        <activity android:name=".main.ParentInfoActivity" />
+        <activity android:name=".main.ParentDetailActivity" />
+        <activity android:name=".main.AddFriendActivity" />
+        <activity android:name=".main.FriendDiaryActivity" />
+        <activity android:name=".main.AddDiaryActivity" />
+        <activity android:name=".main.ParadiseEventActivity" />
+        <activity android:name=".main.ParadiseMlxtActivity" />
+        <activity android:name=".main.SpaceClickAttendanceActivity" />
+        <activity android:name=".main.TrendsDetailActivity" />
+        <activity android:name=".main.CoursewareActivity" />
+        <activity android:name=".main.CourseInfoActivity" />
+        <activity android:name=".ParadiseWebViewActivity" />
+        <activity android:name=".activity.ForgetPswActivity" />
+        <activity android:name=".main.AboutUsActivity"></activity>
+        <activity android:name=".main.TeacherCommunicationActivity"/>
+        <activity android:name=".main.SuggestListActivity"/>
+
+
+
+
+
+        <!-- 极光Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="cn.xiaocool.wxtparent" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="cn.xiaocool.wxtparent" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="cn.xiaocool.wxtparent" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".utils.PushReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="cn.xiaocool.wxtparent" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="c473f4766b25282bd4d2c34a" /> <!--  </>值来自开发者平台取得的AppKey-->
+        <!--极光推送-->
+
+
+
+
+    </application>
+
+</manifest>

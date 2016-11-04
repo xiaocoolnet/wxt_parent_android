@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/whilte"
+    android:layout_height="68dp"
+
+    >
+    <ImageView
+        android:id="@+id/news_hot_news"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/news_contacts_head"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        />
+    <!--文字-->
+    <TextView
+        android:id="@+id/news_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刘天天"
+        android:textSize="@dimen/text_size_18"
+        android:layout_toRightOf="@+id/news_hot_news"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="14dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="在线"
+        android:textSize="@dimen/text_size_15"
+        android:layout_toRightOf="@+id/news_hot_news"
+        android:layout_below="@+id/news_text1"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="14dp"
+
+
+        />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/address_sendmessage"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        />
+
+
+</RelativeLayout>

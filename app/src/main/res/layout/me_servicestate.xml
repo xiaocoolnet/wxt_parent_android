@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/me_collect"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:layout_marginTop="10dip"
+    android:background="@color/white"
+    android:layout_gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_me_myservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/img_me_collect"
+        android:text="@string/me_my_service_text"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_me_service_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@id/tv_me_myservice"
+        android:textColor="@color/title_bg_color"
+        android:text="服务中"
+        android:textSize="15sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/title_bg_color"
+        android:text="截止时间2016.06.15"
+        android:textSize="15sp"
+        android:id="@+id/service_time" />
+
+
+</RelativeLayout>

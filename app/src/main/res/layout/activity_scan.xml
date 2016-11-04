@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent" >-->
+
+        <!--<SurfaceView-->
+            <!--android:id="@+id/preview_view"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_gravity="center" />-->
+
+        <!--<com.qrcode.view.ViewfinderView-->
+            <!--android:id="@+id/viewfinder_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<include-->
+            <!--android:id="@+id/include1"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="@dimen/y40"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--layout="@layout/top_toolbar" />-->
+
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/scan_bottomview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_scan_album"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:src="@mipmap/find_scan_album"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="相册"-->
+                    <!--android:gravity="center"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:textColor="@android:color/white" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_scan_splash"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_splash_bulb"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:src="@mipmap/find_scan_splash_off"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="照亮"-->
+                    <!--android:gravity="center"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:textColor="@android:color/white" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_scan_mQRCode"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:src="@mipmap/find_scan_my_qrcode"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="我的二维码"-->
+                    <!--android:gravity="center"-->
+                    <!--android:drawablePadding="5dp"-->
+                    <!--android:textColor="@android:color/white" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+
+</FrameLayout>

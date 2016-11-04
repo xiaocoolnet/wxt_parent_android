@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp">
+
+
+        <cn.xiaocool.wxtparent.ui.RoundImageView
+            android:id="@+id/view2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/main_daijiequeren" />
+
+
+        <TextView
+            android:id="@+id/tv_baby_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/view2"
+            android:text="yyyy"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_baby_teacher_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/tv_baby_teacher_name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <ImageView
+            android:id="@+id/sms"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/call"
+            android:layout_marginRight="20dp"
+            android:layout_toStartOf="@+id/call"
+            android:background="@drawable/ic_lv" />
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_baby_teacher_phone"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/dianhua" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

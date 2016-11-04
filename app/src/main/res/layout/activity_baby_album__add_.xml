@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.xiaocool.wxtparent.main.BabyAlbum_Add_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/title_bg_color"
+            android:gravity="center"
+            android:text="@string/album"
+            android:textColor="@color/whilte"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/re_fabu"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fabu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:text="发布"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/up_jiantou"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/baby_album_btn_exit"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClick"
+                android:src="@drawable/left_jiantou" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="相册内容" />
+
+            <!--<ImageView-->
+            <!--android:layout_width="80dp"-->
+            <!--android:id="@+id/homework_pic_grid"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:src="@drawable/add_white" />-->
+
+            <cn.xiaocool.wxtparent.ui.NoScrollGridView
+                android:id="@+id/img_add_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="4"></cn.xiaocool.wxtparent.ui.NoScrollGridView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:id="@+id/news_list_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9be5b4"
+            android:gravity="center"
+            android:text="群发消息"
+            android:textColor="@color/title_color"
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:id="@+id/quit"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_fanhui"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <cn.xiaocool.wxtparent.ui.list.PullToRefreshListView
+        android:id="@+id/news_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

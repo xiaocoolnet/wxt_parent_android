@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/recipes_item_week"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#F2F2F2"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="星期一"
+        android:textColor="#A1A0A1"
+        android:textSize="@dimen/text_size_18" />
+
+    <cn.xiaocool.wxtparent.ui.NoScrollListView
+        android:id="@+id/recipes_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

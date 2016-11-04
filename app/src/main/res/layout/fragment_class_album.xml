@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <cn.xiaocool.wxtparent.ui.list.PullToRefreshListView
+        android:id="@+id/fragment_class_pull_list"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+    </cn.xiaocool.wxtparent.ui.list.PullToRefreshListView>
+    <LinearLayout
+        android:id="@+id/edit_and_send"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="#fff">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/type_select_btn_nor"/>
+
+        <EditText
+            android:id="@+id/parent_warn_comment_edit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="请输入..."
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/btn_parent_send"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:background="@drawable/ic_cuiyixia"
+            android:layout_centerVertical="true"
+            android:text="发送"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

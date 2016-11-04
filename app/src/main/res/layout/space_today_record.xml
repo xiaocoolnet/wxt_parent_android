@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <!--宝宝今日记录，白色底-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--白色底-->
+        <ImageView
+            android:id="@+id/main_baisedi"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:background="#ffffff"
+            android:layout_marginTop="7dp"
+            />
+        <!--小贴士图标-->
+        <ImageView
+            android:id="@+id/main_xiaotiezhi"
+            android:layout_width="14dp"
+            android:layout_height="17dp"
+            android:background="@drawable/main_xiaotiezhi"
+            android:layout_alignTop="@+id/main_baisedi"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="11dp"
+            />
+        <!--今日记录-->
+        <TextView
+            android:id="@+id/main_jinrijilu"
+            android:text="宝宝今日记录"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="31dp"
+
+            />
+        <!--打卡按钮-->
+        <Button
+            android:id="@+id/main_daka"
+            android:layout_width="45dp"
+            android:layout_height="27dp"
+            android:background="@drawable/main_btn_daka"
+            android:text="打卡"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:layout_alignRight="@id/main_baisedi"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+
+            />
+        <!--第一条横线-->
+        <ImageView
+            android:id="@+id/main_first_hengxian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_hengxian"
+            android:layout_alignTop="@id/main_baisedi"
+            android:layout_marginTop="40dp"
+            />
+
+        <!--左边部分-->
+
+        <!--到校小图标-->
+        <ImageView
+            android:id="@+id/main_daoxiao"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:background="@drawable/main_daoxiao"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+
+            />
+        <!--到校文字-->
+        <TextView
+            android:id="@+id/main_text_daoxiao"
+            android:text="到校"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+
+            />
+        <!--录像机图标-->
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="13dp"
+            android:background="@drawable/main_luxiangji"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="150dp"
+            android:id="@+id/imageView" />
+        <!--小表图标-->
+        <ImageView
+            android:id="@+id/main_xiaobiao"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:background="@drawable/main_xiaobiao"
+            android:layout_alignLeft="@+id/main_text_daoxiao"
+            android:layout_below="@+id/main_text_daoxiao"
+            android:layout_marginTop="5dp"
+            />
+        <!--时间文本-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="33dp"
+            />
+        <!--几点几分文本-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:16"
+            android:textColor="#000000"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="33dp"
+            android:id="@+id/arrive_time" />
+
+        <!--体温图标-->
+        <ImageView
+            android:id="@+id/main_xiaobiao2"
+            android:layout_width="8dp"
+            android:layout_height="13dp"
+            android:background="@drawable/main_tiwen"
+            android:layout_alignLeft="@+id/main_text_daoxiao"
+            android:layout_below="@+id/main_text_daoxiao"
+            android:layout_marginTop="23dp"
+            />
+        <!--体温文本-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="体温"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            />
+        <!--体温度数-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="37℃"
+            android:textColor="#000000"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/arrive_tem" />
+        <!--中间的竖线-->
+        <ImageView
+            android:id="@+id/main_shuxian"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:background="@drawable/main_shuxian"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+
+            />
+
+        <!--右边部分-->
+
+        <!--离校小图标-->
+        <ImageView
+            android:id="@+id/main_lixiao"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:background="@drawable/main_lixiao"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginLeft="16dp"
+
+            android:contentDescription="" />
+        <!--离校文字-->
+        <TextView
+            android:id="@+id/main_text_lixiao"
+            android:text="离校"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15sp"
+
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_toRightOf="@+id/main_shuxian"
+
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="10dp" />
+        <!--录像机图标-->
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="13dp"
+            android:background="@drawable/main_luxiangji"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="150dp"
+            />
+        <!--小表图标-->
+        <ImageView
+            android:id="@+id/main_xiaobiao22"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:background="@drawable/main_xiaobiao"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_alignLeft="@+id/main_text_lixiao"
+            android:layout_below="@+id/main_text_lixiao"
+            android:layout_marginTop="5dp"
+            />
+        <!--时间文本-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="33dp"
+            />
+        <!--几点几分文本-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17:30"
+            android:textColor="#000000"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="33dp"
+            android:id="@+id/leave_time" />
+
+        <!--体温图标-->
+        <ImageView
+            android:id="@+id/main_wenduji2"
+            android:layout_width="8dp"
+            android:layout_height="13dp"
+            android:background="@drawable/main_tiwen"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_alignLeft="@+id/main_text_lixiao"
+            android:layout_below="@+id/main_text_lixiao"
+            android:layout_marginTop="23dp"
+            />
+        <!--体温文本-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="体温"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            />
+        <!--体温度数-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="36.5℃"
+            android:textColor="#000000"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_toRightOf="@+id/main_shuxian"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/leave_tem" />
+
+
+
+
+
+        <!--第二条横线-->
+        <ImageView
+            android:id="@+id/main_second_hengxian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_hengxian"
+            android:layout_below="@+id/main_first_hengxian"
+            android:layout_marginTop="75dp"
+            />
+
+        <!--记录体重和身高-->
+
+        <!--记录体重按钮-->
+        <Button
+            android:id="@+id/btn_record_weight"
+            android:layout_width="81dp"
+            android:layout_height="31dp"
+            android:text="记录体重"
+            android:textColor="#ffffff"
+            android:gravity="center"
+
+            android:layout_below="@+id/main_second_hengxian"
+            android:layout_marginTop="11.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="#eac852"
+            android:textSize="@dimen/text_size_14"
+            />
+        <!--千克数-->
+        <TextView
+            android:id="@+id/space_weight"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#eac852"
+            android:layout_below="@+id/main_second_hengxian"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="116dp"
+            />
+        <!--kg-->
+        <TextView
+            android:text="kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_below="@+id/main_second_hengxian"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="155dp"
+            />
+
+
+        <!--记录身高按钮-->
+        <Button
+            android:id="@+id/btn_record_height"
+            android:layout_width="81dp"
+            android:layout_height="31dp"
+            android:text="记录身高"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_below="@+id/main_second_hengxian"
+            android:layout_marginTop="11.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="98dp"
+            android:background="#64d6f6"
+            android:textSize="@dimen/text_size_14"
+            />
+        <!--厘米数-->
+        <TextView
+            android:id="@+id/space_stature"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#64d6f6"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/main_second_hengxian"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="50dp"
+
+            />
+        <!--cm-->
+        <TextView
+            android:text="cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_below="@+id/main_second_hengxian"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="18dp"
+            />
+
+
+    </RelativeLayout>
+</LinearLayout>

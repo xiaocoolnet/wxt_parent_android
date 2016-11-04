@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/title_bg_color"
+            android:gravity="center"
+            android:text="@string/space_btn_input_height"
+            android:textColor="@color/whilte"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/up_jiantou"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/left_jiantou"
+                android:id="@+id/btn_exit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_size_60"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="@dimen/activity_size_350"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/edit_background_white"
+            android:layout_marginTop="@dimen/activity_size_5"
+            android:hint=" 请输入身高（单位cm）"
+            android:textColor="@color/black"
+            android:id="@+id/et_height" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="@dimen/activity_size_150"
+        android:layout_height="@dimen/activity_size_40"
+        android:text="完成"
+        android:background="@drawable/btn_background_green2"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/activity_size_20"
+        android:textSize="@dimen/text_size_15"
+        android:id="@+id/btn_finish" />
+
+
+
+</LinearLayout>

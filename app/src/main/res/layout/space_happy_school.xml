@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--快乐学堂，白色底-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp">
+
+        <!--示例图片-->
+        <ImageView
+            android:id="@+id/main_kuailexuetang_shili"
+            android:layout_width="356dp"
+            android:layout_height="186dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_kuailexuetang_shili"
+            />
+        <!--文字解释-->
+        <TextView
+            android:text="文字解释说明文字解释说明"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/main_kuailexuetang_shili"
+            android:layout_marginTop="25dp"
+            />
+
+
+
+    </RelativeLayout>
+</LinearLayout>
