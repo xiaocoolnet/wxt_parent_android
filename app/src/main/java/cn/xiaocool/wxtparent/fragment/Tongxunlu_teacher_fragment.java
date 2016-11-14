@@ -58,7 +58,7 @@ public class Tongxunlu_teacher_fragment extends Fragment {
                                 address.setPhone(itemObject.optString("phone"));
                                 address.setAvator(itemObject.optString("photo"));
                                 addresses.add(address);
-                                insertDataToTable(itemObject.optString("id"), itemObject.optString("name"), NetBaseConstant.NET_CIRCLEPIC_HOST+itemObject.optString("photo"));
+//                                insertDataToTable(itemObject.optString("id"), itemObject.optString("name"), NetBaseConstant.NET_CIRCLEPIC_HOST+itemObject.optString("photo"));
                             }
                         }
 
@@ -90,17 +90,17 @@ public class Tongxunlu_teacher_fragment extends Fragment {
         ProgressViewUtil.show(getActivity());
         userInfo = new UserInfo(getActivity());
         userInfo.readData(getActivity());
-        //打开或者创建数据库, 这里是创建数据库
-        db = SQLiteDatabase.openOrCreateDatabase(getActivity().getFilesDir().toString() + "/users.db", null);
-        System.out.println(getActivity().getFilesDir().toString() + "/users.db");
-
-        Cursor cursor = db.rawQuery("select name from sqlite_master where type='table';", null);
-        while (cursor.moveToNext()) {
-            //遍历出表名
-            String name = cursor.getString(0);
-            Log.i("System.out", name);
-        }
-        insertData(userInfo.getUserId(),userInfo.getUserName(),NetBaseConstant.NET_CIRCLEPIC_HOST+userInfo.getUserImg());
+//        //打开或者创建数据库, 这里是创建数据库
+//        db = SQLiteDatabase.openOrCreateDatabase(getActivity().getFilesDir().toString() + "/users.db", null);
+//        System.out.println(getActivity().getFilesDir().toString() + "/users.db");
+//
+//        Cursor cursor = db.rawQuery("select name from sqlite_master where type='table';", null);
+//        while (cursor.moveToNext()) {
+//            //遍历出表名
+//            String name = cursor.getString(0);
+//            Log.i("System.out", name);
+//        }
+//        insertData(userInfo.getUserId(),userInfo.getUserName(),NetBaseConstant.NET_CIRCLEPIC_HOST+userInfo.getUserImg());
         getNews();
 
     }
@@ -154,6 +154,6 @@ public class Tongxunlu_teacher_fragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (db.isOpen())db.close();
+//        if (db.isOpen())db.close();
     }
 }

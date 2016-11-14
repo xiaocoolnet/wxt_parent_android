@@ -21,6 +21,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import cn.jpush.android.api.JPushInterface;
@@ -30,6 +31,7 @@ import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.HttpTool;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
+import cn.xiaocool.wxtparent.utils.GetUniqueNumber;
 import cn.xiaocool.wxtparent.utils.IntentUtils;
 import cn.xiaocool.wxtparent.utils.KeyBoardUtils;
 import cn.xiaocool.wxtparent.utils.NetBaseUtils;
@@ -69,7 +71,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     logs = "Failed to set alias and tags due to timeout. Try again after 60s.";
                     Log.i("setAlias", logs);
                     // 延迟 60 秒来调用 Handler 设置别名
-                    handler.sendMessageDelayed(handler.obtainMessage(MSG_SET_ALIAS, user.getChildId()), 1000 * 60);
+                    handler.sendMessageDelayed(handler.obtainMessage(MSG_SET_ALIAS, user.getUserId()), 1000 * 60);
                     break;
                 default:
                     logs = "Failed with errorCode = " + i;
@@ -88,7 +90,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
                 case MSG_SET_ALIAS:
                     Log.d("setAlias", "Set alias in handler.");
-                    JPushInterface.setAliasAndTags(getApplicationContext(), (String) msg.obj, null, mAliasCallback);
+                    Set<String> tags = new HashSet<>();
+                    tags.add(user.getUserId());
+                    JPushInterface.setAliasAndTags(getBaseContext(),user.getUserId(),tags,mAliasCallback);
                     break;
                 case CommunalInterfaces.BABY_INFO:
 
@@ -111,7 +115,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     //判断账号是否注册 若没注册 帮对方注册
                     handler.sendEmptyMessage(0x110);
                     JPushInterface.resumePush(mContext);
-                    JPushInterface.setAlias(getBaseContext(), user.getChildId(), mAliasCallback);
+                    Set<String> tag1s = new HashSet<>();
+                    tag1s.add(user.getUserId());
+                    JPushInterface.setAliasAndTags(getBaseContext(),user.getUserId(),tag1s,mAliasCallback);
+                    JPushInterface.getRegistrationID(getBaseContext());
+                    Log.e("getRegistrationID",JPushInterface.getRegistrationID(getBaseContext()));
                     hud.dismiss();
                     IntentUtils.getIntent(LoginActivity.this, MainActivity.class);
                     finish();
@@ -262,7 +270,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                         ToastUtils.ToastShort(LoginActivity.this, "请输入密码！");
                     }else{
                         if (HttpTool.isConnnected(mContext)) {
-                            result_data = HttpTool.Login(phoneNum, password ,"");
+                            result_data = HttpTool.Login(phoneNum, password , JPushInterface.getRegistrationID(getBaseContext()));
                             //调用服务器登录函数
                             handler.sendEmptyMessage(3);
                         } else {

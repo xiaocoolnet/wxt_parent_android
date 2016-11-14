@@ -18,6 +18,7 @@ import cn.xiaocool.wxtparent.main.SpaceClickLeaveActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickParentWarnActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickTeacherReviewActivity;
 import cn.xiaocool.wxtparent.main.Space_homework;
+import cn.xiaocool.wxtparent.main.TeacherCommunicationActivity;
 
 /**
  * Created by Administrator on 2016/9/8.
@@ -40,9 +41,14 @@ public class PushReceiver extends BroadcastReceiver {
 
         if (type==null)return;
         String str = "";
+        String recid = "";
+        String usertype = "";
         try {
             JSONObject jsonObject = new JSONObject(type);
             str = jsonObject.getString("type");
+            if (str.equals("newMessage")){
+                recid = jsonObject.getString("txt");
+            }
         } catch (JSONException e) {
             Log.i(TAG, "JSONException" + type);
             e.printStackTrace();
@@ -139,6 +145,12 @@ public class PushReceiver extends BroadcastReceiver {
                 }else if (str.equals("comment")){//教师点评
                     Intent i = new Intent(context, SpaceClickTeacherReviewActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
+                    context.startActivity(i);
+                }else if (str.equals("newMessage")){
+                    Intent i = new Intent(context, TeacherCommunicationActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
+                    i.putExtra("reciver_id",recid);
+                    i.putExtra("usertype","1");
                     context.startActivity(i);
                 }
 

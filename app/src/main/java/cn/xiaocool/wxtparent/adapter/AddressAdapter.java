@@ -74,6 +74,7 @@ public class AddressAdapter extends BaseAdapter {
                 Intent intent = new Intent(context,TeacherCommunicationActivity.class);
                 intent.putExtra("reciver_id", addresses.get(position).getId());
                 intent.putExtra("chat_name",addresses.get(position).getName());
+                intent.putExtra("usertype","1");
                 context.startActivity(intent);
             }
         });
