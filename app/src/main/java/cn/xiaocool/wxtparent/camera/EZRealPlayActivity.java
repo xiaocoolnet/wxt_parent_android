@@ -232,15 +232,8 @@ public class EZRealPlayActivity extends Activity implements OnClickListener, Sur
 
     // 横屏云台
     private boolean mIsOnPtz = false;
-    private int[] mStartXy = new int[2];
-    private int[] mEndXy = new int[2];
 
     private PopupWindow mQualityPopupWindow = null;
-    private PopupWindow mPtzPopupWindow = null;
-    private LinearLayout mPtzControlLy = null;
-    private PopupWindow mTalkPopupWindow = null;
-    private RingView mTalkRingView = null;
-    private Button mTalkBackControlBtn = null;
 
     private WaitDialog mWaitDialog = null;
 
@@ -248,14 +241,6 @@ public class EZRealPlayActivity extends Activity implements OnClickListener, Sur
      * 监听锁屏解锁的事件
      */
     private RealPlayBroadcastReceiver mBroadcastReceiver = null;
-    /**
-     * 定时器
-     */
-    private Timer mUpdateTimer = null;
-    /**
-     * 定时器执行的任务
-     */
-    private TimerTask mUpdateTimerTask = null;
 
     // 全屏按钮
     private CheckTextButton mFullscreenButton;
@@ -2008,38 +1993,6 @@ public class EZRealPlayActivity extends Activity implements OnClickListener, Sur
     }
 
     FileOutputStream mOs;
-
-    /* 录像回调函数
-     * @param var1:视频数据
-     * @param var2:数据长度
-     * @param var3:数据类型
-     * @param var4:自定义数据
-     */
-    private EZOpenSDKListener.EZStandardFlowCallback mLocalRecordCb = new EZOpenSDKListener.EZStandardFlowCallback() {
-        @Override
-        public void onStandardFlowCallback(int type, byte[] data, int dataLen) {
-            LogUtil.verboseLog(TAG, "standard flow. type is " + type + ". dataLen is " + dataLen + ". data0 is " + data[0]);
-
-            if (mOs == null) {
-                File f = new File("/sdcard/videogo.mp4");
-                try {
-                    mOs = new FileOutputStream(f);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                    LogUtil.errorLog(TAG, "new record file failed");
-
-                    return;
-                }
-            }
-            try {
-                mOs.write(data, 0, dataLen);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-
-            }
-        }
-    };
 
 
 }
