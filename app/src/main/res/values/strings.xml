@@ -446,4 +446,24 @@
     <string name="update_download_start">下载开始</string>
     <string name="update_download_new_version">有新版本</string>
     <string name="version_id">10</string>
+
+    <string name="loading_text_default">加载中，请稍候</string>
+    <string name="realplay_fail_device_not_exist">设备不在线</string>
+    <string name="countdown">留言时长还剩%d秒</string>
+    <string name="quality_hd">高清</string>
+    <string name="quality_balanced">均衡</string>
+    <string name="quality_flunet">流畅</string>
+    <string name="capture">截图</string>
+    <string name="realplay_set_fail_network">设置失败，请检查您的网络</string>
+    <string name="setting_video_level">正在设置画面质量…</string>
+    <string name="already_saved_to_volume">已保存至相册</string>
+    <string name="remoteplayback_SDCard_disable_use">存储卡不可用</string>
+    <string name="remoteplayback_capture_fail_for_memory">抓图失败,存储空间已满</string>
+    <string name="realplay_play_fail_becauseof_network">视频播放失败，请检查您的网络</string>
+    <string name="realplay_set_vediomode_fail">视频质量切换失败</string>
+    <string name="remoteplayback_over_link">设备连接数过大，停止其他连接后再试试吧</string>
+    <string name="realplay_fail_connect_device">播放失败，连接设备异常</string>
+    <string name="realplay_play_fail">视频播放失败</string>
+
+
 </resources>

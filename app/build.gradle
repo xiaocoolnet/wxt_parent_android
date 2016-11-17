@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
@@ -55,5 +60,5 @@ dependencies {
     compile files('libs/badgeview.jar')
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.lguipeng.bubbleview:library:1.0.0'
-
+    compile files('libs/EZOpenSDK.jar')
 }

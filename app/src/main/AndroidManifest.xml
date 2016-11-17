@@ -57,7 +57,9 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <!--极光推送-->
 
-
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
 
 
 
@@ -272,9 +274,11 @@
         <activity android:name=".main.AboutUsActivity"></activity>
         <activity android:name=".main.TeacherCommunicationActivity"/>
         <activity android:name=".main.SuggestListActivity"/>
-
-
-
+        <activity android:name=".camera.DeviceInfoListActivity"/>
+        <activity android:name=".camera.EZRealPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            />
 
 
         <!-- 极光Required SDK核心功能-->
@@ -369,7 +373,20 @@
         <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
         <meta-data android:name="JPUSH_APPKEY" android:value="c473f4766b25282bd4d2c34a" /> <!--  </>值来自开发者平台取得的AppKey-->
         <!--极光推送-->
+        <activity
+            android:name="com.videogo.main.EzvizWebViewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden" />
 
+
+        <!--<receiver-->
+            <!--android:name="com.videogo.EzvizBroadcastReceiver"-->
+            <!--android:exported="false" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.videogo.action.OAUTH_SUCCESS_ACTION" />-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
 
 
 

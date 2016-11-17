@@ -110,4 +110,9 @@
     <color name="orange">#FFA726</color>
     <color name="gray_normal">#666667</color>
     <color name="holo_red_light">#ffff4444</color>
+
+    <color name="quality_focused_color">#448cf3</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="dark_bg_70p">#bb000000</color>
+
 </resources>

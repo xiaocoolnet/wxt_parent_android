@@ -23,6 +23,7 @@ import com.jauker.widget.BadgeView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.videogo.openapi.EZOpenSDK;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,6 +34,7 @@ import java.util.Date;
 
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.bean.ParentInfo;
+import cn.xiaocool.wxtparent.camera.DeviceInfoListActivity;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.main.AddChildActivity;
 import cn.xiaocool.wxtparent.main.BabyInformationActivity;
@@ -431,6 +433,15 @@ public class SpaceFragment extends Fragment implements View.OnClickListener {
 
         space_files = (RelativeLayout) getView().findViewById(R.id.space_files);
         space_files.setOnClickListener(this);
+        getView().findViewById(R.id.main_baobaoshipin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                EZOpenSDK.getInstance().openLoginPage();
+                Intent intent = new Intent(mContext, DeviceInfoListActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initBabyInfo() {
