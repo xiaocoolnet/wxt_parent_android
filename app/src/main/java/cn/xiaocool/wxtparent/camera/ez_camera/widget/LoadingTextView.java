@@ -1,4 +1,4 @@
-package cn.xiaocool.wxtparent.camera.widget;
+package cn.xiaocool.wxtparent.camera.ez_camera.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;

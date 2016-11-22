@@ -465,5 +465,15 @@
     <string name="realplay_fail_connect_device">播放失败，连接设备异常</string>
     <string name="realplay_play_fail">视频播放失败</string>
 
+    <string name="video_monitor_play_error">画面打开失败,请检查网络或摄像头后重试</string>
+    <string name="common_loading">努力加载中</string>
+    <string name="video_monitor_image_capture_success">截图成功</string>
+    <string name="video_monitor_image_capture_failed">截图失败</string>
+    <string name="video_monitor_change_stream_normal">正在切换成"流畅"模式</string>
+    <string name="video_monitor_change_stream_hd">正在切换成"高清"模式</string>
+    <string name="video_monitor_load_talk_sound_error">缓冲或对讲中，无法开启声音</string>
+    <string name="video_monitor_sound_open">声音打开</string>
+    <string name="video_monitor_sound_close">声音关闭</string>
+    <string name="live_play_name">实时预览</string>
 
 </resources>

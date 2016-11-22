@@ -62,5 +62,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.lguipeng.bubbleview:library:1.0.0'
     compile files('libs/EZOpenSDK.jar')
+    compile files('libs/lechangeSDK.jar')
     compile 'com.android.support:multidex:'
 }

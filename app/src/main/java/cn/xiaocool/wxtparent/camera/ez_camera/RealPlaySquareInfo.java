@@ -13,7 +13,7 @@
  * 
  * @warning 这里写本文件的相关警告
  */
-package cn.xiaocool.wxtparent.camera;
+package cn.xiaocool.wxtparent.camera.ez_camera;
 
 /**
  * 在此对类做相应的描述

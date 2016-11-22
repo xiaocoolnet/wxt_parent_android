@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <cn.xiaocool.wxtparent.camera.widget.LoadingView
+    <cn.xiaocool.wxtparent.camera.ez_camera.widget.LoadingView
         android:id="@+id/loading_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

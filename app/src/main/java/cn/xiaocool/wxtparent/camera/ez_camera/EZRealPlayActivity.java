@@ -13,11 +13,10 @@
  * 
  * @warning 这里写本文件的相关警告
  */
-package cn.xiaocool.wxtparent.camera;
+package cn.xiaocool.wxtparent.camera.ez_camera;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -45,15 +44,11 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.TranslateAnimation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
@@ -75,13 +70,10 @@ import com.videogo.exception.BaseException;
 import com.videogo.exception.ErrorCode;
 import com.videogo.exception.InnerException;
 import com.videogo.openapi.EZConstants;
-import com.videogo.openapi.EZConstants.EZPTZAction;
-import com.videogo.openapi.EZConstants.EZPTZCommand;
 import com.videogo.openapi.EZConstants.EZRealPlayConstants;
 import com.videogo.openapi.EZConstants.EZVideoLevel;
 import com.videogo.openapi.EZGlobalSDK;
 import com.videogo.openapi.EZOpenSDK;
-import com.videogo.openapi.EZOpenSDKListener;
 import com.videogo.openapi.EZPlayer;
 import com.videogo.openapi.bean.EZAreaInfo;
 import com.videogo.openapi.bean.EZCameraInfo;
@@ -97,22 +89,16 @@ import com.videogo.util.Utils;
 import com.videogo.widget.CheckTextButton;
 import com.videogo.widget.CustomRect;
 import com.videogo.widget.CustomTouchListener;
-import com.videogo.widget.RingView;
 import com.videogo.widget.TitleBar;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import cn.xiaocool.wxtparent.R;
-import cn.xiaocool.wxtparent.camera.widget.LoadingTextView;
-import cn.xiaocool.wxtparent.camera.widget.WaitDialog;
+import cn.xiaocool.wxtparent.camera.MyCameraInfo;
+import cn.xiaocool.wxtparent.camera.ez_camera.widget.LoadingTextView;
+import cn.xiaocool.wxtparent.camera.ez_camera.widget.WaitDialog;
 
 /**
  * 实时预览2.7
@@ -268,7 +254,7 @@ public class EZRealPlayActivity extends Activity implements OnClickListener, Sur
     //    private StubPlayer mStub = new StubPlayer();
     private CheckTextButton mFullScreenTitleBarBackBtn;
     private EZVideoLevel mCurrentQulityMode = EZVideoLevel.VIDEO_LEVEL_HD;
-    private EZDeviceInfo mDeviceInfo = null;
+    private MyCameraInfo.MyEzDeviceInfo mDeviceInfo = null;
     private EZCameraInfo mCameraInfo = null;
 
     /**
@@ -811,7 +797,7 @@ public class EZRealPlayActivity extends Activity implements OnClickListener, Sur
 
     private void updateOrientation() {
         if (mIsOnTalk) {
-            if (mEZPlayer != null && mDeviceInfo != null && mDeviceInfo.isSupportTalk() != EZConstants.EZTalkbackCapability.EZTalkbackNoSupport) {
+            if (mEZPlayer != null && mDeviceInfo != null) {
                 setOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
             } else {
                 setForceOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);

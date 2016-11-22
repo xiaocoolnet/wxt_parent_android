@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.util.Log;
 
+import com.lechange.opensdk.api.LCOpenSDK_Api;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -53,10 +54,16 @@ public class WxtApplication extends Application {
     private ArrayList<Address> usersinfos = new ArrayList<>();
     public static final String APP_ID = "wx1929ca4290231712";
     //环信注册
-
-    public static String APP_KEY = "e6a9eb61e34d4b64a6a1d92867914d9c";
+    //萤石云
+    public static String EZ_APP_KEY = "e6a9eb61e34d4b64a6a1d92867914d9c";
     public static String API_URL = "https://open.ys7.com";
     public static String WEB_URL = "https://auth.ys7.com";
+    public static String EZ_ACCESS_TOKEN ;
+    //乐橙
+    public static String lechange_host = "openapi.lechange.cn:443";
+    public static String LECHANGE_APP_KEY = "lc6419aa19c5f74ddb";
+    public static String LECHANGE_APP_SERCRET = "3451cd2dbdc54d8f8f71bc85a5bab1";
+    public static String LECHANGE_ACCESS_TOKEN ;
 
     @Override
     public void onCreate() {
@@ -77,7 +84,10 @@ public class WxtApplication extends Application {
 
         //初始化极光
         setPush();
+        //初始化萤石云
         setEzOpen();
+        //初始化乐橙
+        setLeChange();
     }
 
     private void setEzOpen() {
@@ -95,12 +105,14 @@ public class WxtApplication extends Application {
         /**
          * APP_KEY请替换成自己申请的
          */
-        EZOpenSDK.initLib(this, APP_KEY, "");
+        EZOpenSDK.initLib(this, EZ_APP_KEY, "");
 
         EzvizAPI.getInstance().setServerUrl(API_URL, WEB_URL);
-        //此token只是暂时写死，以后需要从服务器获取
-        EzvizAPI.getInstance().setAccessToken("at.4yjt0i3p998gk0re7hpq7v4d74lqjmnl-2a1wdrskh3-156772n-bfitxirxx");
 
+    }
+
+    private void setLeChange(){
+        LCOpenSDK_Api.setHost(lechange_host);
     }
 
     private void setPush() {

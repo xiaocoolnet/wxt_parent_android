@@ -275,11 +275,16 @@
         <activity android:name=".main.TeacherCommunicationActivity"/>
         <activity android:name=".main.SuggestListActivity"/>
         <activity android:name=".camera.DeviceInfoListActivity"/>
-        <activity android:name=".camera.EZRealPlayActivity"
+        <activity android:name=".camera.ez_camera.EZRealPlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             />
-
+        <activity
+            android:name = ".camera.lc_camera.MediaPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
 
         <!-- 极光Required SDK核心功能-->
         <activity

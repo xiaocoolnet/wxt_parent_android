@@ -1,4 +1,4 @@
-package cn.xiaocool.wxtparent.camera;
+package cn.xiaocool.wxtparent.camera.ez_camera;
 
 import android.app.Activity;
 import android.content.Context;
