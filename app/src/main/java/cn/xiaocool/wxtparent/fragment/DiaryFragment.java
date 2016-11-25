@@ -187,17 +187,15 @@ public class DiaryFragment extends Fragment implements View.OnClickListener, Bas
                                 }
                                 CricleList.add(cricle);
                             }
-
+                            Collections.sort(CricleList, new Comparator<ClassCricleInfo>() {
+                                @Override
+                                public int compare(ClassCricleInfo lhs, ClassCricleInfo rhs) {
+                                    return (int) (Long.parseLong(rhs.getAddtime())-Long.parseLong(lhs.getAddtime()));
+                                }
+                            });
                             if (mAdapter != null) {
                                 mAdapter.notifyDataSetChanged();
                             } else {
-
-                                Collections.sort(CricleList, new Comparator<ClassCricleInfo>() {
-                                    @Override
-                                    public int compare(ClassCricleInfo lhs, ClassCricleInfo rhs) {
-                                        return (int) (Long.parseLong(rhs.getAddtime())-Long.parseLong(lhs.getAddtime()));
-                                    }
-                                });
                                 mAdapter = new BabyDiaryAdapter(CricleList, mContext, handler, commentView, "7");
                                 lv.setAdapter(mAdapter);
                                 adapter = null;

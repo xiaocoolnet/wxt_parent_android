@@ -81,7 +81,7 @@ public class DeviceInfoListActivity extends BaseActivity {
      * 以后从服务器获取
      */
     private void initAccessToken() {
-        WxtApplication.getInstance().EZ_ACCESS_TOKEN = "at.4yjt0i3p998gk0re7hpq7v4d74lqjmnl-2a1wdrskh3-156772n-bfitxirxx";
+        WxtApplication.getInstance().EZ_ACCESS_TOKEN = "at.7p7cn8v9amk8de561qjhe3ppdjgcq1rl-4n4j52wjzz-07ozia7-qgzdvhndv";
         WxtApplication.getInstance().LECHANGE_ACCESS_TOKEN = "At_c8f4390050c84528b2b2df9ddefa6bea";
 
         EzvizAPI.getInstance().setAccessToken(WxtApplication.getInstance().EZ_ACCESS_TOKEN);
