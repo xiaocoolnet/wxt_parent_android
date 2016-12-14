@@ -13,12 +13,13 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class OnlineCommentActivity extends Activity implements View.OnClickListener {
+public class OnlineCommentActivity extends BaseActivity implements View.OnClickListener {
     private Context mContext;
     private RelativeLayout btn_exit;
     private TextView submit;

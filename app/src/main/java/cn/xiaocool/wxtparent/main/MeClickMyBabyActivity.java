@@ -23,6 +23,7 @@ import java.util.Set;
 
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.MyBabyAdapter;
 import cn.xiaocool.wxtparent.bean.UserInfo;
@@ -33,7 +34,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class MeClickMyBabyActivity extends Activity implements View.OnClickListener {
+public class MeClickMyBabyActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private String[] name,id,childAvator,className,schoolName,classId,schoolId;

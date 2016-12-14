@@ -47,6 +47,27 @@ public class SpaceRequest {
         childId = user.getChildId();
     }
 
+    public void post(final String url, final List<NameValuePair> params, final int KEY){
+        new Thread() {
+            Message msg = Message.obtain();
+
+            public void run() {
+
+                String result_data = NetBaseUtils.getResponseForPost(url, params, mContext);
+                try {
+                    JSONObject obj = new JSONObject(result_data);
+                    msg.what = KEY;
+                    msg.obj = obj;
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } finally {
+                    handler.sendMessage(msg);
+                }
+            }
+        }.start();
+
+    }
+
 
     //获取当前绑定的宝宝信息
     public void BabyInfo() {

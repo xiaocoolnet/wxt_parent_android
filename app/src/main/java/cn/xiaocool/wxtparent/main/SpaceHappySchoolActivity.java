@@ -17,6 +17,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.HappySchoolAdapter;
 import cn.xiaocool.wxtparent.bean.HappySchool;
@@ -27,7 +28,7 @@ import cn.xiaocool.wxtparent.ui.RearingChildListView;
 /**
  * Created by Administrator on 2016/3/22.
  */
-public class SpaceHappySchoolActivity extends Activity {
+public class SpaceHappySchoolActivity extends BaseActivity {
     private ImageView btn_exit;
     private RearingChildListView happySchoolLv;
     private HappySchoolAdapter happySchoolAdapter;

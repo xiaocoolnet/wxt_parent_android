@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,12 +14,13 @@ import android.widget.ListView;
 import java.util.HashMap;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 /**
  * Created by Administrator on 2016/3/23.
  */
-public class MeClickInvitedFamilies extends Activity {
+public class MeClickInvitedFamilies extends BaseActivity {
     private Button invitefamilyBtn;
     private ListView invitefamilyListView;
     private String familyphone = "",familyname = "";

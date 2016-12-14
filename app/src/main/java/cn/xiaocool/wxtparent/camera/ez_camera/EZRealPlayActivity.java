@@ -16,7 +16,6 @@
 package cn.xiaocool.wxtparent.camera.ez_camera;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -69,7 +68,6 @@ import com.videogo.errorlayer.ErrorInfo;
 import com.videogo.exception.BaseException;
 import com.videogo.exception.ErrorCode;
 import com.videogo.exception.InnerException;
-import com.videogo.openapi.EZConstants;
 import com.videogo.openapi.EZConstants.EZRealPlayConstants;
 import com.videogo.openapi.EZConstants.EZVideoLevel;
 import com.videogo.openapi.EZGlobalSDK;
@@ -77,7 +75,6 @@ import com.videogo.openapi.EZOpenSDK;
 import com.videogo.openapi.EZPlayer;
 import com.videogo.openapi.bean.EZAreaInfo;
 import com.videogo.openapi.bean.EZCameraInfo;
-import com.videogo.openapi.bean.EZDeviceInfo;
 import com.videogo.realplay.RealPlayStatus;
 import com.videogo.util.ConnectionDetector;
 import com.videogo.util.LocalInfo;
@@ -95,6 +92,7 @@ import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Random;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.camera.MyCameraInfo;
 import cn.xiaocool.wxtparent.camera.ez_camera.widget.LoadingTextView;
@@ -106,7 +104,7 @@ import cn.xiaocool.wxtparent.camera.ez_camera.widget.WaitDialog;
  * @author xiaxingsuo
  * @data 2015-11-11
  */
-public class EZRealPlayActivity extends Activity implements OnClickListener, SurfaceHolder.Callback,
+public class EZRealPlayActivity extends BaseActivity implements OnClickListener, SurfaceHolder.Callback,
         Handler.Callback, OnTouchListener {
     private static final String TAG = "RealPlayerActivity";
     /**

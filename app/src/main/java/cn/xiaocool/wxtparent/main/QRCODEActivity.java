@@ -14,12 +14,13 @@ import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXImageObject;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.ui.SharePopupWindow;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
-public class QRCODEActivity extends Activity implements View.OnClickListener {
+public class QRCODEActivity extends BaseActivity implements View.OnClickListener {
     private RelativeLayout btn_exit;
     private RelativeLayout tv_share;
     private   int flag=0;

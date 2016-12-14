@@ -1,11 +1,9 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -19,6 +17,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Teacher_style_Adapter;
 import cn.xiaocool.wxtparent.bean.Teacher_style;
@@ -30,7 +29,7 @@ import cn.xiaocool.wxtparent.ui.list.PullToRefreshListView;
 import cn.xiaocool.wxtparent.utils.LogUtils;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class WebNewsActivity extends Activity implements View.OnClickListener {
+public class WebNewsActivity extends BaseActivity implements View.OnClickListener {
 
 
     private ListView listView;

@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,9 +17,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.BabyParentAdapter;
-import cn.xiaocool.wxtparent.adapter.MyBabyAdapter;
 import cn.xiaocool.wxtparent.bean.ParentInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.MeRequest;
@@ -30,7 +29,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class MeClickMyParentActivity extends Activity implements View.OnClickListener {
+public class MeClickMyParentActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private Context mContext;

@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +21,7 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.CommunicationAdapter;
 import cn.xiaocool.wxtparent.bean.CommunicateModel;
@@ -34,7 +34,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.utils.VolleyUtil;
 
 
-public class TeacherCommunicationActivity extends Activity {
+public class TeacherCommunicationActivity extends BaseActivity {
 
 
     private ListView commnicate_lv;
@@ -45,7 +45,7 @@ public class TeacherCommunicationActivity extends Activity {
     private Context context;
     private UserInfo user;
     private List<CommunicateModel> communicateModelList;
-    private String receive_uid,usertype;
+    private String receive_uid,usertype,type;
     private int tag = 0;
     private Receiver receiver;
     private Handler handler = new Handler(){
@@ -72,11 +72,16 @@ public class TeacherCommunicationActivity extends Activity {
         context = this;
         user = new UserInfo(context);
         communicateModelList = new ArrayList<>();
+        type = getIntent().getStringExtra("type");
+        if(type == null){
+            type = "0";
+        }
         initView();
         receiver = new Receiver();
         IntentFilter filter = new IntentFilter("com.USER_ACTION");
         registerReceiver(receiver, filter);
         usertype = getIntent().getStringExtra("usertype");
+
     }
 
     @Override
@@ -134,9 +139,16 @@ public class TeacherCommunicationActivity extends Activity {
         findViewById(R.id.btn_add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(context,ChatInfoActivity.class);
+                intent.putExtra("chatid",getIntent().getStringExtra("chatid"));
+                intent.putExtra("chat_name",getIntent().getStringExtra("chat_name"));
+                startActivity(intent);
 
             }
         });
+        if (type.equals("0")){
+            findViewById(R.id.btn_add).setVisibility(View.GONE);
+        }
         commnicate_lv = (ListView) findViewById(R.id.commnicate_lv);
         swip_layout = (SwipeRefreshLayout) findViewById(R.id.swip_layout);
         ed_comment = (EditText) findViewById(R.id.ed_comment);
@@ -184,7 +196,7 @@ public class TeacherCommunicationActivity extends Activity {
 
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("send_type","0"));
-        params.add(new BasicNameValuePair("usertype",usertype));
+        params.add(new BasicNameValuePair("usertype",type.equals("0")?"1":"2"));
         params.add(new BasicNameValuePair("studentid",user.getChildId()));
         params.add(new BasicNameValuePair("send_uid", user.getUserId()));
         params.add(new BasicNameValuePair("receive_uid",receive_uid));

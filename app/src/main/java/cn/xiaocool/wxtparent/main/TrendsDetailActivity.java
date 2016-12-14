@@ -34,6 +34,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.CommentAdapter;
 import cn.xiaocool.wxtparent.adapter.MyGridAdapter;
@@ -51,7 +52,7 @@ import cn.xiaocool.wxtparent.utils.LogUtils;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
 
-public class TrendsDetailActivity extends Activity {
+public class TrendsDetailActivity extends BaseActivity {
 
     private static final int GET_VIEWPAPER_LIST_KEY = 1;
     private static final int GET_CIRCLE_LIST_KEY = 2;

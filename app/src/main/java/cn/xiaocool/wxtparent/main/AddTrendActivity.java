@@ -14,7 +14,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -43,6 +42,7 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.LocalImgGridAdapter;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
@@ -56,7 +56,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/5/11.
  */
-public class AddTrendActivity extends FragmentActivity implements View.OnClickListener {
+public class AddTrendActivity extends BaseActivity implements View.OnClickListener {
     private ImageView btn_exit;
     private EditText homework_content;
     private Intent intent;

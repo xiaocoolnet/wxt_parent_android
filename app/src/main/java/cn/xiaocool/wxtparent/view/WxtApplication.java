@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.util.Log;
 
+import com.bugtags.library.Bugtags;
 import com.lechange.opensdk.api.LCOpenSDK_Api;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
@@ -88,6 +89,15 @@ public class WxtApplication extends Application {
         setEzOpen();
         //初始化乐橙
         setLeChange();
+        //初始化bugtag
+        setBugtag();
+    }
+
+    /**
+     * 初始化bugtag
+     */
+    private void setBugtag() {
+        Bugtags.start("55a71ccb80004b5446e4f0cf5a3922f9", this, Bugtags.BTGInvocationEventBubble);
     }
 
     private void setEzOpen() {

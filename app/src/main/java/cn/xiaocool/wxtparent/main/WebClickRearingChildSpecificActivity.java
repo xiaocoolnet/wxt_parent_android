@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -14,13 +13,14 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 
 /**
  * Created by Administrator on 2016/3/22.
  */
-public class WebClickRearingChildSpecificActivity extends Activity{
+public class WebClickRearingChildSpecificActivity extends BaseActivity {
     private TextView title;
     private ImageView rearingChildImageView;
     private TextView content;

@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +16,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.CoursewareAdapter;
 import cn.xiaocool.wxtparent.bean.CourseInfo;
@@ -25,7 +25,7 @@ import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.ui.ProgressViewUtil;
 
-public class CoursewareActivity extends Activity implements View.OnClickListener {
+public class CoursewareActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private ArrayList<Courseware> coursewares;
     private RelativeLayout rl_back;

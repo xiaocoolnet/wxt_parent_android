@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +8,13 @@ import android.widget.TextView;
 
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 /**
  * Created by Administrator on 2016/3/30.
  */
-public class ScanQrCodeActivity extends Activity{
+public class ScanQrCodeActivity extends BaseActivity {
     private TextView resultTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

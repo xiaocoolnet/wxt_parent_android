@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.FriendAdapter;
 import cn.xiaocool.wxtparent.bean.Friend;
@@ -29,7 +30,7 @@ import cn.xiaocool.wxtparent.ui.ProgressViewUtil;
 /**
  * Created by Administrator on 2016/3/25.
  */
-public class SpaceFriendsActivity extends Activity implements View.OnClickListener {
+public class SpaceFriendsActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private ListView listView;
     private RelativeLayout rl_back;

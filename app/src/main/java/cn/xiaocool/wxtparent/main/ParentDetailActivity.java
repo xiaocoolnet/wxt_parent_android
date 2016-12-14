@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,7 +13,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,12 +23,10 @@ import android.widget.Toast;
 import com.baoyz.actionsheet.ActionSheet;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -42,18 +38,16 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.bean.ParentInfo;
-import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.UserRequest;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.net.request.constant.NetBaseConstant;
 import cn.xiaocool.wxtparent.ui.PicassoImageLoader;
-import cn.xiaocool.wxtparent.utils.DateUtils;
 import cn.xiaocool.wxtparent.utils.PicassoPauseOnScrollListener;
-import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class ParentDetailActivity extends FragmentActivity implements View.OnClickListener {
+public class ParentDetailActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private RelativeLayout rl_back,rl_img;
     private ParentInfo parentInfo;

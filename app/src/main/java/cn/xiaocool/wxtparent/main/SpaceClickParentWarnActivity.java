@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ParentWarnListAdapter;
 import cn.xiaocool.wxtparent.bean.ParentWarnInfo;
@@ -35,7 +36,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/4/3.
  */
-public class SpaceClickParentWarnActivity extends Activity implements View.OnClickListener {
+public class SpaceClickParentWarnActivity extends BaseActivity implements View.OnClickListener {
 
     private RelativeLayout up_jiantou;
     private ImageView image_add;

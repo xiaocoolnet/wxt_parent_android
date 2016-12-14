@@ -1,6 +1,5 @@
-package cn.xiaocool.wxtparent.activity;
+package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,21 +11,19 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
-
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.app.ExitApplication;
 import cn.xiaocool.wxtparent.bean.UserInfo;
-import cn.xiaocool.wxtparent.main.LoginActivity;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.IntentUtils;
 import cn.xiaocool.wxtparent.utils.LogUtils;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
-public class ForgetPswActivity extends Activity implements View.OnClickListener {
+public class ForgetPswActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private TextView tv_finish;
     private RelativeLayout rl_back;

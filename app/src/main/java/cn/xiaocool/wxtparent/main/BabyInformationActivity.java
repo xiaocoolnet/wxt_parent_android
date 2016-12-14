@@ -52,6 +52,7 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.bean.BabyInfo;
 import cn.xiaocool.wxtparent.bean.UserInfo;
@@ -65,7 +66,7 @@ import cn.xiaocool.wxtparent.utils.DateUtils;
 import cn.xiaocool.wxtparent.utils.PicassoPauseOnScrollListener;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class BabyInformationActivity extends FragmentActivity implements View.OnClickListener {
+public class BabyInformationActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private RelativeLayout rl_back;
     private LinearLayout ll_baby_pic,ll_mother_pic,ll_father_pic;

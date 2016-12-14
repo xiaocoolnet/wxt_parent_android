@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ClassEvent_2_Adapter;
 import cn.xiaocool.wxtparent.bean.ClassEvent;
@@ -34,7 +35,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/3/20.
  */
-public class SpaceClickClassEventActivity extends Activity implements View.OnClickListener {
+public class SpaceClickClassEventActivity extends BaseActivity implements View.OnClickListener {
 
     private Context mContext;
     private ArrayList<ClassEvent> list_classEvent_data;

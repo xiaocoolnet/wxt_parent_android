@@ -15,6 +15,7 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.bean.UserInfo;
 
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
@@ -29,7 +30,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickInputWeightActivity extends Activity implements View.OnClickListener {
+public class SpaceClickInputWeightActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private Button btn_finish;

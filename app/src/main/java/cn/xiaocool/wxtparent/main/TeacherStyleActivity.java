@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,6 +17,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.TeacherInfosAdapter;
 import cn.xiaocool.wxtparent.bean.TeacherInfo;
@@ -25,7 +25,7 @@ import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 
 
-public class TeacherStyleActivity extends Activity {
+public class TeacherStyleActivity extends BaseActivity {
 
     private RelativeLayout up_jiantou;
     private ListView listView;

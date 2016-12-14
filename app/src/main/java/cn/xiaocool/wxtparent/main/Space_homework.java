@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -20,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Homework_Adapter;
 import cn.xiaocool.wxtparent.bean.Homework;
@@ -33,7 +33,7 @@ import cn.xiaocool.wxtparent.ui.list.PullToRefreshListView;
 import cn.xiaocool.wxtparent.utils.SPUtils;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class Space_homework extends Activity implements View.OnClickListener {
+public class Space_homework extends BaseActivity implements View.OnClickListener {
 
     private ListView listView;
     private PullToRefreshListView listView_pull;

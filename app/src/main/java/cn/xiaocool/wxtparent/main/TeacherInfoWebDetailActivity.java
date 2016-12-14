@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -22,6 +21,7 @@ import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.net.request.constant.NetBaseConstant;
 import cn.xiaocool.wxtparent.ui.SharePopupWindow;
@@ -29,7 +29,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
 
-public class TeacherInfoWebDetailActivity extends Activity {
+public class TeacherInfoWebDetailActivity extends BaseActivity {
 
     private String itemid, title,type,content;
     private TextView title_bar_name;

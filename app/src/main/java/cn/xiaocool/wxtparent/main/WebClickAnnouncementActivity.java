@@ -1,42 +1,29 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Message;
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
+
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
+import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Teacher_style_Adapter;
-import cn.xiaocool.wxtparent.adapter.WebIntroduce_Adapter;
-import cn.xiaocool.wxtparent.bean.Announcement;
-import cn.xiaocool.wxtparent.bean.Comments;
-import cn.xiaocool.wxtparent.bean.LikeBean;
 import cn.xiaocool.wxtparent.bean.Teacher_style;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
-
-import cn.xiaocool.wxtparent.R;
-import cn.xiaocool.wxtparent.net.HttpTool;
 import cn.xiaocool.wxtparent.net.NetUtil;
-import cn.xiaocool.wxtparent.net.request.ClassCircleRequest;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
-import cn.xiaocool.wxtparent.net.request.WebRequest;
 import cn.xiaocool.wxtparent.ui.list.PullToRefreshBase;
 import cn.xiaocool.wxtparent.ui.list.PullToRefreshListView;
 import cn.xiaocool.wxtparent.utils.LogUtils;
@@ -46,7 +33,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
  * Created by wzh on 2016/2/25.
  */
 
-public class WebClickAnnouncementActivity extends Activity implements View.OnClickListener {
+public class WebClickAnnouncementActivity extends BaseActivity implements View.OnClickListener {
 
 //    private Context mContext;
 //    private List<Announcement.AnnouncementData> list_web_introduce_data;

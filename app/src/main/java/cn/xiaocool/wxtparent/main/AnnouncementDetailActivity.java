@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ParWarnImgGridAdapter;
 import cn.xiaocool.wxtparent.bean.AnnouncementInfo;
@@ -32,7 +32,7 @@ import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class AnnouncementDetailActivity extends Activity implements View.OnClickListener {
+public class AnnouncementDetailActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private AnnouncementInfo homeworkData;
     private ImageView iv_head,iv_content;

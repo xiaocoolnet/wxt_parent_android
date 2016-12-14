@@ -51,6 +51,7 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
@@ -61,7 +62,7 @@ import cn.xiaocool.wxtparent.utils.PicassoPauseOnScrollListener;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
-public class AddChildActivity extends FragmentActivity implements View.OnClickListener {
+public class AddChildActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private RelativeLayout rl_back,rl_name,rl_relation,rl_phone,rl_photo;
     private TextView tv_name,tv_relation,tv_phone,tv_add;

@@ -25,6 +25,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.DateGridAdapter;
 import cn.xiaocool.wxtparent.adapter.TeacherAttendanceAdapter;
@@ -42,7 +43,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
  * 考勤Activity
  * Created by wzh on 2016/2/19.
  */
-public class SpaceClickAttendanceActivity extends Activity implements View.OnClickListener {
+public class SpaceClickAttendanceActivity extends BaseActivity implements View.OnClickListener {
 
     private RelativeLayout up_jiantou;
     private ImageView btn_exit, last_month, next_month;

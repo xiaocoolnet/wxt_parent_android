@@ -55,8 +55,8 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
-import cn.xiaocool.wxtparent.activity.ForgetPswActivity;
 import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.net.UserRequest;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
@@ -68,7 +68,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class WebClickEditActivity extends FragmentActivity implements View.OnClickListener {
+public class WebClickEditActivity extends BaseActivity implements View.OnClickListener {
     private Context mContext;
     private ImageView set_head_img;
     private LinearLayout reset_head_img,reset_name,reset_sex,reset_phone,reset_secert;

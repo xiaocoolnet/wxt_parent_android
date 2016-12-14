@@ -1,20 +1,14 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -25,19 +19,19 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.RecipesAdapter;
 import cn.xiaocool.wxtparent.bean.RecipeInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.DateUtils;
-import cn.xiaocool.wxtparent.utils.ToastUtils;
 
 
 /**
  * Created by wzh on 2016/3/27.
  */
-public class SpaceClickRecipesActivity extends Activity implements View.OnClickListener {
+public class SpaceClickRecipesActivity extends BaseActivity implements View.OnClickListener {
     private ImageView btn_exit;
     private ListView recipesView;
     private RecipesAdapter recipesAdapter;

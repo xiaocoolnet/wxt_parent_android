@@ -19,6 +19,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Homework_pl_adapter;
 import cn.xiaocool.wxtparent.adapter.Teacher_style_Adapter;
@@ -36,7 +37,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class WebClickTeacherStyleActivity extends Activity implements View.OnClickListener {
+public class WebClickTeacherStyleActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private ListView listView;

@@ -101,10 +101,10 @@ public class HttpTool {
             return result = "请求失败，请检查网络2332"+e.getMessage().toString();
         }
     }
-    public static String Login(String phone, String password,String jgtoken) {
+    public static String Login(String phone, String password,String jgtoken,String usertype) {
 
         String url = NetBaseConstant.NET_API_HOST + "a=applogin";
-        String data = "phone="+phone+"&password="+password +"&jgtoken="+jgtoken;
+        String data = "phone="+phone+"&password="+password +"&jgtoken="+jgtoken+"&usertype="+usertype;
         String result = "";
         result = getResponse(url,data);
         return  result;

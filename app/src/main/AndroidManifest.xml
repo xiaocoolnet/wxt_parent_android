@@ -187,7 +187,6 @@
 
         <!-- 点击我的宝宝 -->
         <activity android:name=".main.MeClickMyBabyActivity" />
-        <activity android:name=".activity.CircleImagesActivity" />
 
         <!-- 记录体重身高按钮 -->
         <activity android:name=".main.SpaceClickHeightActivity" />
@@ -270,11 +269,14 @@
         <activity android:name=".main.CoursewareActivity" />
         <activity android:name=".main.CourseInfoActivity" />
         <activity android:name=".ParadiseWebViewActivity" />
-        <activity android:name=".activity.ForgetPswActivity" />
+        <activity android:name=".main.ForgetPswActivity" />
         <activity android:name=".main.AboutUsActivity"></activity>
         <activity android:name=".main.TeacherCommunicationActivity"/>
         <activity android:name=".main.SuggestListActivity"/>
         <activity android:name=".camera.DeviceInfoListActivity"/>
+        <activity android:name=".main.ChatInfoActivity"/>
+        <activity android:name=".main.ChangeChatNameActivity"/>
+        <activity android:name=".main.MyClassListActivity"/>
         <activity android:name=".camera.ez_camera.EZRealPlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"

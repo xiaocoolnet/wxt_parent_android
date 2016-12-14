@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +21,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ParWarnImgGridAdapter;
 import cn.xiaocool.wxtparent.bean.NewsGroup;
@@ -29,7 +29,7 @@ import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class NewGroupDetailActivity extends Activity implements View.OnClickListener {
+public class NewGroupDetailActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private NewsGroup newsGroup;
     private TextView tv_time,tv_content,tv_zongfa,tv_yidu,tv_weidu,tv_name;

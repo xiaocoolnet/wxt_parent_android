@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,26 +8,22 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
-import cn.xiaocool.wxtparent.adapter.RearingChildAdapter;
 import cn.xiaocool.wxtparent.adapter.Teacher_style_Adapter;
-import cn.xiaocool.wxtparent.bean.RearingChild;
 import cn.xiaocool.wxtparent.bean.Teacher_style;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.NetUtil;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
-import cn.xiaocool.wxtparent.ui.RearingChildListView;
 import cn.xiaocool.wxtparent.ui.list.PullToRefreshBase;
 import cn.xiaocool.wxtparent.ui.list.PullToRefreshListView;
 import cn.xiaocool.wxtparent.utils.LogUtils;
@@ -37,7 +32,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/2/25.
  */
-public class WebClickRearingChildActivity extends Activity implements View.OnClickListener {
+public class WebClickRearingChildActivity extends BaseActivity implements View.OnClickListener {
 
 //    private ImageView btn_exit;
 //    private RearingChildListView rearingChildLv;

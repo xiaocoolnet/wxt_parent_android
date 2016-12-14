@@ -11,6 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.SuggestListAdapter;
 import cn.xiaocool.wxtparent.bean.SuggestModel;
@@ -21,7 +22,7 @@ import cn.xiaocool.wxtparent.utils.JsonParser;
 import cn.xiaocool.wxtparent.utils.VolleyUtil;
 
 
-public class SuggestListActivity extends Activity {
+public class SuggestListActivity extends BaseActivity {
 
     private ListView listView;
     private PullToRefreshListView pullToRefreshListView;

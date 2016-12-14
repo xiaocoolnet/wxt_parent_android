@@ -43,6 +43,7 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.LocalImgGridAdapter;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
@@ -56,7 +57,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/5/11.
  */
-public class AddDiaryActivity extends FragmentActivity implements View.OnClickListener {
+public class AddDiaryActivity extends BaseActivity implements View.OnClickListener {
     private ImageView btn_exit;
     private EditText homework_content;
     private Intent intent;

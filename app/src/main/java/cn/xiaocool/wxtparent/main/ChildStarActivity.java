@@ -1,16 +1,16 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 
-public class ChildStarActivity extends Activity {
+public class ChildStarActivity extends BaseActivity {
 
     private EditText apply_content;
     private RelativeLayout send_btn,up_jiantou;

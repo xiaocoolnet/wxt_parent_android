@@ -1,8 +1,8 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
+import cn.xiaocool.wxtparent.BaseActivity;
 
-public class ResultActivity extends Activity {
+public class ResultActivity extends BaseActivity {
 //
 //	private TextView tv;
 //	private ImageView img;

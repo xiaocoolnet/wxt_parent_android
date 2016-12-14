@@ -12,12 +12,13 @@ import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.fragment.FamilyPhotoFragment;
 import cn.xiaocool.wxtparent.fragment.LifePhotoFragment;
 import cn.xiaocool.wxtparent.fragment.VoiceBroadcastFragment;
 
-public class SwingCardSettingActivity extends Activity implements View.OnClickListener {
+public class SwingCardSettingActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private RelativeLayout btn_exit;
     private Fragment[] fragments;

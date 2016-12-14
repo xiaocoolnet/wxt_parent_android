@@ -8,12 +8,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -42,6 +41,7 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.LocalImgGridAdapter;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
@@ -50,7 +50,7 @@ import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.ui.PicassoImageLoader;
 import cn.xiaocool.wxtparent.utils.PicassoPauseOnScrollListener;
 
-public class Add_ParentWarn extends FragmentActivity implements View.OnClickListener {
+public class Add_ParentWarn extends BaseActivity implements View.OnClickListener {
 
     private RelativeLayout up_jiantou, re_send, re_dzr, re_jsr;
     private EditText ed_content;

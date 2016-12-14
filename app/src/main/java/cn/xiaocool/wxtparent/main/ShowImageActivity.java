@@ -11,9 +11,10 @@ import android.widget.ImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
-public class ShowImageActivity extends Activity implements View.OnClickListener {
+public class ShowImageActivity extends BaseActivity implements View.OnClickListener {
 
     private Context context;
     private ImageView imageView,back;

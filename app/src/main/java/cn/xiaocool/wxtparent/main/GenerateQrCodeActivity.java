@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -13,12 +12,13 @@ import android.widget.Toast;
 
 import com.xys.libzxing.zxing.encoding.EncodingUtils;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 /**
  * Created by Administrator on 2016/3/23.
  */
-public class GenerateQrCodeActivity extends Activity{
+public class GenerateQrCodeActivity extends BaseActivity {
 
     private EditText qrStrEditText;
     private ImageView qrImgImageView;

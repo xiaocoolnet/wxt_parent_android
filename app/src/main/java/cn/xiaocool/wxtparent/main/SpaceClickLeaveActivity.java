@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Leave_lb_Adapter;
 import cn.xiaocool.wxtparent.bean.LeaveInfo;
@@ -34,7 +35,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickLeaveActivity extends Activity implements View.OnClickListener {
+public class SpaceClickLeaveActivity extends BaseActivity implements View.OnClickListener {
     private ImageView leave_add;
     private RelativeLayout up_jiantou;
     private ListView listView;

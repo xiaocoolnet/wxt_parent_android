@@ -9,9 +9,10 @@ import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
-public class FeedbackActivity extends Activity implements View.OnClickListener {
+public class FeedbackActivity extends BaseActivity implements View.OnClickListener {
     private Context mContext;
     private RelativeLayout btn_exit;
     @Override

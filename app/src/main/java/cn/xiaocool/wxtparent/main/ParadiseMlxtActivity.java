@@ -6,12 +6,13 @@ import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.PradiseMlxtAdapter;
 import cn.xiaocool.wxtparent.ui.list.PullToRefreshListView;
 
 
-public class ParadiseMlxtActivity extends Activity {
+public class ParadiseMlxtActivity extends BaseActivity {
 
 
     private RelativeLayout up_jiantou;

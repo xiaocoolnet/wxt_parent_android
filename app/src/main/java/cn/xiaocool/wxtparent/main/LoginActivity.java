@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,12 +25,12 @@ import java.util.Set;
 
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.HttpTool;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
-import cn.xiaocool.wxtparent.utils.GetUniqueNumber;
 import cn.xiaocool.wxtparent.utils.IntentUtils;
 import cn.xiaocool.wxtparent.utils.KeyBoardUtils;
 import cn.xiaocool.wxtparent.utils.NetBaseUtils;
@@ -41,7 +40,7 @@ import cn.xiaocool.wxtparent.view.WxtApplication;
 /**
  * Created by mac on 16/1/23.
  */
-public class LoginActivity extends Activity implements View.OnClickListener {
+public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private String userid;
     private String result_data, token;
     private Button btn_login;
@@ -251,7 +250,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         user.setUserPhone(phone);
         user.setUserPassword(password);
         user.writeData(mContext);
-
         hud = KProgressHUD.create(LoginActivity.this)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setDetailsLabel("登陆中...")
@@ -270,7 +268,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                         ToastUtils.ToastShort(LoginActivity.this, "请输入密码！");
                     }else{
                         if (HttpTool.isConnnected(mContext)) {
-                            result_data = HttpTool.Login(phoneNum, password , JPushInterface.getRegistrationID(getBaseContext()));
+                            result_data = HttpTool.Login(phoneNum, password , JPushInterface.getRegistrationID(getBaseContext()),"0");
                             //调用服务器登录函数
                             handler.sendEmptyMessage(3);
                         } else {

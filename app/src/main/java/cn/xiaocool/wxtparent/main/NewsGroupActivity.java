@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -22,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.NewsGroupAdapter;
 import cn.xiaocool.wxtparent.bean.NewsGroup;
@@ -39,7 +39,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/4/22.
  */
-public class NewsGroupActivity extends Activity implements View.OnClickListener{
+public class NewsGroupActivity extends BaseActivity implements View.OnClickListener{
     private RelativeLayout quit;
     private PullToRefreshListView news_list_view;
     private ArrayList<NewsGroup> newsGroups;

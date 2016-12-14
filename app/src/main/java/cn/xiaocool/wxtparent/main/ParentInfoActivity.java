@@ -1,27 +1,23 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
-import cn.xiaocool.wxtparent.adapter.BabyParentAdapter;
 import cn.xiaocool.wxtparent.bean.ParentInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class ParentInfoActivity extends Activity implements View.OnClickListener {
+public class ParentInfoActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private RelativeLayout rl_back,rl_bangding,rl_zhuhao,rl_shanchu;
     private ParentInfo parentInfo;

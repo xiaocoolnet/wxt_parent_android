@@ -13,13 +13,14 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.net.request.constant.WebHome;
 
 /**
  * Created by Administrator on 2016/3/21.
  */
-public class SpaceClickClassSpecificEventActivity extends Activity {
+public class SpaceClickClassSpecificEventActivity extends BaseActivity {
     private TextView title;
     private ImageView classactivityImageView;
     private TextView content;

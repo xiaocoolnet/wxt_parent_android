@@ -15,13 +15,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
+
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 
 /**
  * 描述：视频播放Activity 作者： lc
  */
-public class MediaPlayActivity extends FragmentActivity implements MediaPlayFragment.BackHandlerInterface{
+public class MediaPlayActivity extends BaseActivity implements MediaPlayFragment.BackHandlerInterface{
 	
 	private final static String tag = "MediaPlayActivity";
 	private CommonTitle mCommonTitle;

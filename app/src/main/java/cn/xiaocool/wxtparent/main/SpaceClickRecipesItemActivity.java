@@ -16,13 +16,14 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 import org.w3c.dom.Text;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.net.request.constant.NetBaseConstant;
 
 /**
  * Created by wzh on 2016/3/28.
  */
-public class SpaceClickRecipesItemActivity extends Activity implements View.OnClickListener {
+public class SpaceClickRecipesItemActivity extends BaseActivity implements View.OnClickListener {
     private ImageView img, btnExit;
     private TextView tvTitle, tvInfo;
 

@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -21,6 +20,7 @@ import com.tencent.android.tpush.XGPushManager;
 import java.util.ArrayList;
 
 import cn.jpush.android.api.JPushInterface;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ViewPagerAdapter;
 import cn.xiaocool.wxtparent.bean.AppInfo;
@@ -28,7 +28,7 @@ import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.utils.IntentUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
-public class SplashActivity extends Activity implements View.OnClickListener,ViewPager.OnPageChangeListener {
+public class SplashActivity extends BaseActivity implements View.OnClickListener,ViewPager.OnPageChangeListener {
     private   int UID ;
     private Context mContext;
     private TextView tv_login;

@@ -11,12 +11,13 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 /**
  * Created by Administrator on 2016/4/19.
  */
-public class SpaceClickSpecificConfirmActivity extends Activity implements View.OnClickListener {
+public class SpaceClickSpecificConfirmActivity extends BaseActivity implements View.OnClickListener {
     private TextView baby_id;
     private TextView confirm_relation;
     private TextView confirm_delivery_time;

@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.net.HttpTool;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
@@ -18,7 +18,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/3/23.
  */
-public class MeClickInviteFamily extends Activity {
+public class MeClickInviteFamily extends BaseActivity {
     private ImageView btn_exit;
     private EditText invitefamily_et_telephone;
     private EditText invitefamily_et_name;

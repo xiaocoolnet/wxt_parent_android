@@ -1,11 +1,9 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -16,10 +14,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class SelectRelationActivity extends Activity implements View.OnClickListener {
+public class SelectRelationActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private RelativeLayout rl_back,rl_yey,rl_nainai,rl_shushu,rl_ayi,rl_laolao,rl_laoye,rl_relation;
     private TextView tv_complete,tv_relation;

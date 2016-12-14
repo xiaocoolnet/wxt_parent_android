@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.HttpTool;
@@ -23,7 +24,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickInputHeightActivity extends Activity implements View.OnClickListener {
+public class SpaceClickInputHeightActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private Button btn_finish;

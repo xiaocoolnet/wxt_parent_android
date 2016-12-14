@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
@@ -34,6 +33,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.NetUtil;
@@ -43,7 +43,7 @@ import cn.xiaocool.wxtparent.ui.MyDatePickerDialog;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
 
-public class ApplySchoolActivity extends Activity implements View.OnClickListener {
+public class ApplySchoolActivity extends BaseActivity implements View.OnClickListener {
 
     private EditText apply_name, aply_birthy, apply_address, apply_class, apply_phone_num, apply_qq, apply_wechat, apply_edu,
             apply_school, apply_remark;

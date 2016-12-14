@@ -22,6 +22,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ParWarnImgGridAdapter;
 import cn.xiaocool.wxtparent.bean.Homework;
@@ -29,7 +30,7 @@ import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class HomeworkDetailActivity extends Activity implements View.OnClickListener {
+public class HomeworkDetailActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private Homework.HomeworkData homeworkData;
     private ImageView iv_head,iv_content;

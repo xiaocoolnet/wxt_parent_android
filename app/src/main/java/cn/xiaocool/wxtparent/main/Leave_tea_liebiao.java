@@ -17,13 +17,14 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.TeacherListAdapter;
 import cn.xiaocool.wxtparent.bean.Teacher;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 
-public class Leave_tea_liebiao extends Activity {
+public class Leave_tea_liebiao extends BaseActivity {
     private Context context;
     private RelativeLayout up_jiantou;
     private ArrayList<Teacher> teachers;

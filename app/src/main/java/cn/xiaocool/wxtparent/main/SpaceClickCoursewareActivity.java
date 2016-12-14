@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,13 +16,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickCoursewareActivity extends Activity implements View.OnClickListener {
+public class SpaceClickCoursewareActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private ListView listView;

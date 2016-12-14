@@ -21,6 +21,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Annou_Adapter;
 import cn.xiaocool.wxtparent.adapter.WebIntroduce_Adapter;
@@ -50,7 +51,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 
 
 
-public class WebClickIntroduceActivity extends Activity implements View.OnClickListener {
+public class WebClickIntroduceActivity extends BaseActivity implements View.OnClickListener {
 
     private Context mContext;
     private List<Announcement.AnnouncementData> list_web_introduce_data;

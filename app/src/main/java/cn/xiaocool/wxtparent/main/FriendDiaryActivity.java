@@ -41,6 +41,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.MyDiaryAdapter;
 import cn.xiaocool.wxtparent.adapter.NoFriendContentAdapter;
@@ -57,7 +58,7 @@ import cn.xiaocool.wxtparent.utils.LogUtils;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
-public class FriendDiaryActivity extends Activity implements View.OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class FriendDiaryActivity extends BaseActivity implements View.OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
     private PullToRefreshListView lv_homework;
     private String id;
     private ListView lv;

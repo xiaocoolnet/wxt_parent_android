@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ViewPageAdapter;
 import cn.xiaocool.wxtparent.presenter.ImageBrowsePresenter;
@@ -21,7 +21,7 @@ import cn.xiaocool.wxtparent.ui.ImageBrowseView;
 import cn.xiaocool.wxtparent.utils.ScreenUtils;
 
 
-public class ImgDetailActivity extends Activity implements ViewPager.OnPageChangeListener,View.OnClickListener,ImageBrowseView {
+public class ImgDetailActivity extends BaseActivity implements ViewPager.OnPageChangeListener,View.OnClickListener,ImageBrowseView {
 
     private ViewPager vp;
     private TextView hint;

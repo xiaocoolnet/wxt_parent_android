@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,6 +14,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
@@ -26,7 +26,7 @@ import cn.xiaocool.wxtparent.view.WxtApplication;
 /**
  * Created by wzh on 2016/1/24.
  */
-public class ForgetPasswordActivity extends Activity implements View.OnClickListener {
+public class ForgetPasswordActivity extends BaseActivity implements View.OnClickListener {
     private int second = 30;
     private Button btn_next;
     private Button btn_sendVerifyCode;

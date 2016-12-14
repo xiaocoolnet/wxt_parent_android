@@ -22,6 +22,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.TeacherReviewDetailAdapter;
 import cn.xiaocool.wxtparent.adapter.TeacherReview_Adapter;
@@ -39,7 +40,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickTeacherReviewActivity extends Activity implements View.OnClickListener {
+public class SpaceClickTeacherReviewActivity extends BaseActivity implements View.OnClickListener {
     private RelativeLayout up_jiantou;
     private RelativeLayout last_month, next_month;
     private TextView year_month;

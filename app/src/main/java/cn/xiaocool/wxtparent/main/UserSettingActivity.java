@@ -36,6 +36,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import cn.jpush.android.api.JPushInterface;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.app.ExitApplication;
 import cn.xiaocool.wxtparent.bean.UserInfo;
@@ -51,7 +52,7 @@ import cn.xiaocool.wxtparent.view.update.UpdateService;
 /**
  * Created by Administrator on 2016/4/2.
  */
-public class UserSettingActivity extends Activity implements View.OnClickListener {
+public class UserSettingActivity extends BaseActivity implements View.OnClickListener {
     private RelativeLayout btn_exit,rl_help,rl_feedback,about_us,rl_version;
     private UserInfo user = new UserInfo();
     private SharedPreferences sp;

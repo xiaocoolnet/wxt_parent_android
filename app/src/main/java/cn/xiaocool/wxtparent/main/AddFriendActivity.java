@@ -1,24 +1,21 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
-import cn.xiaocool.wxtparent.adapter.FriendAdapter;
 import cn.xiaocool.wxtparent.adapter.StudentInfoAdapter;
 import cn.xiaocool.wxtparent.bean.Friend;
 import cn.xiaocool.wxtparent.bean.StudentInfo;
@@ -27,7 +24,7 @@ import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
-public class AddFriendActivity extends Activity implements View.OnClickListener {
+public class AddFriendActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
     private ListView listView;
     private RelativeLayout rl_back;

@@ -10,10 +10,11 @@ import android.widget.ListView;
 import java.util.List;
 import java.util.Objects;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Baby_Album_Pinglun_Adapter;
 
-public class Baby_Album_PingLun_Activity extends Activity {
+public class Baby_Album_PingLun_Activity extends BaseActivity {
 
     private ListView listView;
     private List<Objects> list;

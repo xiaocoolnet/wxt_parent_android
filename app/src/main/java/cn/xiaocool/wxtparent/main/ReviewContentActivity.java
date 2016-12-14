@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,12 +7,13 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 
 /**
  * Created by wzh on 2016/3/16.
  */
-public class ReviewContentActivity extends Activity implements View.OnClickListener {
+public class ReviewContentActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView tvName,tvContent,tvDate;
     private ImageView ivExit;

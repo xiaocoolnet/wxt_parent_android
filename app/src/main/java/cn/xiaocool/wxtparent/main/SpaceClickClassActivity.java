@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.ClassScheduleExAdapter;
 import cn.xiaocool.wxtparent.bean.ClassList;
@@ -31,7 +32,7 @@ import cn.xiaocool.wxtparent.ui.ProgressViewUtil;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickClassActivity extends Activity implements View.OnClickListener {
+public class SpaceClickClassActivity extends BaseActivity implements View.OnClickListener {
 
     private RelativeLayout up_jiantou;
     private ExpandableListView class_schedule_list;

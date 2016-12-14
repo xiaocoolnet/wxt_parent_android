@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
@@ -24,7 +25,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by Administrator on 2016/4/6.
  */
-public class MySendMessageToTeacherActivity extends Activity implements View.OnClickListener {
+public class MySendMessageToTeacherActivity extends BaseActivity implements View.OnClickListener {
     private EditText send_message;
     private Button send_btn;
     private Button clear_btn;

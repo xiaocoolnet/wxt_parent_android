@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -10,6 +9,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.fragment.Fragment_confim_dwc;
 import cn.xiaocool.wxtparent.fragment.Fragment_confim_ygq;
@@ -19,7 +19,7 @@ import cn.xiaocool.wxtparent.utils.SPUtils;
 /**
  * Created by wzh on 2016/1/29.
  */
-public class SpaceClickConfimActivity extends Activity implements View.OnClickListener {
+public class SpaceClickConfimActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private int index;

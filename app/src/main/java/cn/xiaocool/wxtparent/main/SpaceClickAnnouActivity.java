@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -19,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.Annou_Adapter;
 import cn.xiaocool.wxtparent.bean.AnnouncementInfo;
@@ -35,7 +35,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by wzh on 2016/3/17.
  */
-public class SpaceClickAnnouActivity extends Activity implements View.OnClickListener {
+public class SpaceClickAnnouActivity extends BaseActivity implements View.OnClickListener {
     private Context mContext;
     private ArrayList<AnnouncementInfo> list_annou_data;
     private RelativeLayout re1;

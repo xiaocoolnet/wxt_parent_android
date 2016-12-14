@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
@@ -31,7 +32,7 @@ import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 /**
  * 这个类没有用到
  */
-public class SpaceClickNewsActivity2 extends Activity implements View.OnClickListener {
+public class SpaceClickNewsActivity2 extends BaseActivity implements View.OnClickListener {
 
     private ImageView btn_exit;
     private LinearLayout newsListItem;

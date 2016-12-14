@@ -16,7 +16,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -49,6 +48,7 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.PauseOnScrollListener;
 import cn.finalteam.galleryfinal.ThemeConfig;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.LocalImgGridAdapter;
 import cn.xiaocool.wxtparent.bean.UserInfo;
@@ -58,7 +58,7 @@ import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.ui.PicassoImageLoader;
 import cn.xiaocool.wxtparent.utils.PicassoPauseOnScrollListener;
 
-public class Leave_add_activity extends FragmentActivity {
+public class Leave_add_activity extends BaseActivity {
     private RelativeLayout up_jiantou, re_dzr, re_jsr, re_kssj, re_jssj, re_qjlb, re_send;
     private TextView tv_dingzhuren, tv_jieshouren, tv_kssj, tv_jssj,tv_qjlb;
     private String begintime, endtime, parentid, reason, studentid, teacherid;

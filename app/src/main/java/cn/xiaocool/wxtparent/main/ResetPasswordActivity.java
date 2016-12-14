@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.net.HttpTool;
 import cn.xiaocool.wxtparent.view.WxtApplication;
@@ -19,7 +20,7 @@ import cn.xiaocool.wxtparent.view.WxtApplication;
 /**
  * Created by wzh on 2016/1/25.
  */
-public class ResetPasswordActivity extends Activity implements View.OnClickListener {
+public class ResetPasswordActivity extends BaseActivity implements View.OnClickListener {
     private EditText edit_password1;
     private EditText edit_password2;
     private Button btn_finish;

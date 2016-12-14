@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.xiaocool.wxtparent.BaseActivity;
 import cn.xiaocool.wxtparent.R;
 import cn.xiaocool.wxtparent.adapter.TeacherInfosAdapter;
 import cn.xiaocool.wxtparent.bean.TeacherInfo;
@@ -40,7 +40,7 @@ import cn.xiaocool.wxtparent.utils.IntentUtils;
 /**
  * Created by 潘 on 2016/4/5.
  */
-public class SpeaceSchoolWebActivity extends Activity implements View.OnClickListener,BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class SpeaceSchoolWebActivity extends BaseActivity implements View.OnClickListener,BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
     private RelativeLayout building, people, nearby, web_teacher_style;
     private TextView tv_red;
     private ImageView btn_exit;
