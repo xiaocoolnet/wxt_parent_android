@@ -40,7 +40,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.xiaocool.wxtparent.R;
-
 import cn.xiaocool.wxtparent.bean.ClassCricleInfo;
 import cn.xiaocool.wxtparent.bean.Comments;
 import cn.xiaocool.wxtparent.bean.LikeBean;
@@ -49,6 +48,8 @@ import cn.xiaocool.wxtparent.main.ImgDetailActivity;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.ui.CommentPopupWindow;
 import cn.xiaocool.wxtparent.utils.LogUtils;
+import cn.xiaocool.wxtparent.utils.SPUtils;
+import cn.xiaocool.wxtparent.utils.ToastUtils;
 import cn.xiaocool.wxtparent.view.WxtApplication;
 
 
@@ -106,20 +107,23 @@ public class MyDiaryAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, final ViewGroup parent) {
         final ViewHolder holder;
-        if (convertView == null){
+
             convertView = inflater.inflate(R.layout.my_message_diary,null);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
-        }else {
-            holder = (ViewHolder) convertView.getTag();
-        }
+
         if(homeworkDataList.get(position).getId().equals("today")){
             convertView = inflater.inflate(R.layout.no_friend_data1,null);
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dialog();
-                    //ToastUtils.ToastShort(context,"催一催");
+                    if(SPUtils.get(context,"babytoday","").equals(new SimpleDateFormat("yyyy-MM-dd").format(new Date()))
+                            &&SPUtils.get(context,"babyisShow",false).equals(true)){
+                        ToastUtils.ToastShort(context,"您今天已经催过您的好友了");
+                        return;
+                    }else{
+                        dialog();
+                    }
                 }
             });
         }else{
@@ -398,6 +402,9 @@ public class MyDiaryAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 share();
+                String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+                SPUtils.put(context, "babytoday", today);
+                SPUtils.put(context, "babyisShow", true);
                 tempDialog.dismiss();
             }
         });

@@ -1,6 +1,5 @@
 package cn.xiaocool.wxtparent.main;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -36,6 +35,7 @@ import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.ui.NoScrollGridView;
 import cn.xiaocool.wxtparent.ui.NoScrollListView;
 import cn.xiaocool.wxtparent.ui.ProgressViewUtil;
+import cn.xiaocool.wxtparent.utils.SPUtils;
 import cn.xiaocool.wxtparent.utils.TimeToolUtils;
 import cn.xiaocool.wxtparent.utils.ToastUtils;
 
@@ -146,7 +146,12 @@ public class SpaceClickAttendanceActivity extends BaseActivity implements View.O
 
                     }
                 case 123:
-                    showPopupWindow();
+                    if(SPUtils.get(context,"today","").equals(new SimpleDateFormat("yyyy-MM-dd").format(new Date()))
+                            &&SPUtils.get(context,"isShow",false).equals(true)){
+                        return;
+                    }else{
+                        showPopupWindow();
+                    }
                     break;
                 case CommunalInterfaces.RESIGN:
                     if (msg.obj != null) {
@@ -211,6 +216,9 @@ public class SpaceClickAttendanceActivity extends BaseActivity implements View.O
         tv_quxiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+                SPUtils.put(context,"today",today);
+                SPUtils.put(context,"isShow",true);
                 tempDialog.dismiss();
             }
         });
