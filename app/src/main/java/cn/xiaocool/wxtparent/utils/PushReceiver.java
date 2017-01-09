@@ -43,9 +43,11 @@ public class PushReceiver extends BroadcastReceiver {
         String str = "";
         String recid = "";
         String usertype = "";
+        String loginOther = "";
         try {
             JSONObject jsonObject = new JSONObject(type);
             str = jsonObject.getString("type");
+            loginOther = str;
             if (str.equals("newMessage")){
                 recid = jsonObject.getString("txt");
             }
@@ -109,6 +111,7 @@ public class PushReceiver extends BroadcastReceiver {
 
             Intent pointIntent = new Intent();
             pointIntent.setAction("com.USER_ACTION");
+            pointIntent.putExtra("loginOther",loginOther);
             context.sendBroadcast(pointIntent);
 
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
