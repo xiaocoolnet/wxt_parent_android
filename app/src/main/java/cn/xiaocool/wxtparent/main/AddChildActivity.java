@@ -98,7 +98,7 @@ public class AddChildActivity extends BaseActivity implements View.OnClickListen
                             new SpaceRequest(context,handler).addParent(tv_name.getText().toString(), tv_relation.getText().toString(), tv_phone.getText().toString(),picname);
                             Log.e("pushhead","ok");
                         }else {
-                            ToastUtils.ToastShort(context,"图片上传失败！");
+                            ToastUtils.ToastShort(context,"头像上传失败！");
                             Log.e("pushhead","not");
                         }
                     }

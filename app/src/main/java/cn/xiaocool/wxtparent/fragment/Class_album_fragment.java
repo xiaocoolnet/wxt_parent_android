@@ -45,7 +45,7 @@ public class Class_album_fragment extends Fragment implements View.OnClickListen
     private LinearLayout commentView;
     private ListView lv;
     private ArrayList<ClassCricleInfo> CricleList = new ArrayList<>();
-    private AlbumListAdapter mAdapter;
+    public AlbumListAdapter mAdapter;
     private Context mContext;
     private static final int HOMEWORK_PRAISE_KEY = 104;
     private static final int DEL_HOMEWORK_PRAISE_KEY = 105;

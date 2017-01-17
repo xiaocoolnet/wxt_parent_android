@@ -80,6 +80,11 @@ public class StuParentAdapter extends BaseExpandableListAdapter {
         }else{
             iv_jiantou.setImageResource(R.drawable.address_triangle);
         }
+        if (stuParent.getParent_info().size()<1){
+            iv_jiantou.setVisibility(View.GONE);
+        }else {
+            iv_jiantou.setVisibility(View.VISIBLE);
+        }
         return convertView;
     }
 

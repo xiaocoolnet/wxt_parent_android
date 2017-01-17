@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -41,6 +42,7 @@ import cn.xiaocool.wxtparent.bean.LikeBean;
 import cn.xiaocool.wxtparent.bean.UserInfo;
 import cn.xiaocool.wxtparent.dao.CommunalInterfaces;
 import cn.xiaocool.wxtparent.main.AddTrendActivity;
+import cn.xiaocool.wxtparent.main.MainActivity;
 import cn.xiaocool.wxtparent.net.NetUtil;
 import cn.xiaocool.wxtparent.net.request.SpaceRequest;
 import cn.xiaocool.wxtparent.ui.list.PullToRefreshBase;
@@ -52,7 +54,7 @@ import cn.xiaocool.wxtparent.utils.ToastUtils;
 /**
  * Created by mac on 16/1/25.
  */
-public class FindFragment extends Fragment implements OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+public class FindFragment extends Fragment implements OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener,View.OnLayoutChangeListener{
     private PullToRefreshListView lv_homework;
     private String data = null;
     private LinearLayout commentView;
@@ -259,6 +261,7 @@ public class FindFragment extends Fragment implements OnClickListener, BaseSlide
                 }, 1000);
             }
         });
+        activityRootView = view.findViewById(R.id.layout_root);
         lv = lv_homework.getRefreshableView();
         viewH = LayoutInflater.from(getActivity()).inflate(R.layout.web_slide_image,
                 null);
@@ -279,6 +282,8 @@ public class FindFragment extends Fragment implements OnClickListener, BaseSlide
     @Override
     public void onResume() {
         super.onResume();
+        //添加layout大小发生改变监听器
+        activityRootView.addOnLayoutChangeListener(this);
         getAllInformation();
     }
 
@@ -342,4 +347,42 @@ public class FindFragment extends Fragment implements OnClickListener, BaseSlide
 
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        //获取屏幕高度
+        screenHeight = getActivity().getWindowManager().getDefaultDisplay().getHeight();
+        //阀值设置为屏幕高度的1/3
+        keyHeight = screenHeight/3;
+    }
+
+    //Activity最外层的Layout视图
+    private View activityRootView;
+    //屏幕高度
+    private int screenHeight = 0;
+    //软件盘弹起后所占高度阀值
+    private int keyHeight = 0;
+    @Override
+    public void onLayoutChange(View v, int left, int top, int right,
+                               int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+
+        //old是改变前的左上右下坐标点值，没有old的是改变后的左上右下坐标点值
+
+//      System.out.println(oldLeft + " " + oldTop +" " + oldRight + " " + oldBottom);
+//      System.out.println(left + " " + top +" " + right + " " + bottom);
+
+
+        //现在认为只要控件将Activity向上推的高度超过了1/3屏幕高，就认为软键盘弹起
+        if(oldBottom != 0 && bottom != 0 &&(oldBottom - bottom > keyHeight)){
+
+        }else if(oldBottom != 0 && bottom != 0 &&(bottom - oldBottom > keyHeight)){
+
+            if (mAdapter.commentPopupWindow!=null&&mAdapter.commentPopupWindow.isShowing()) {
+                mAdapter.commentPopupWindow.dismiss();
+            }
+
+        }
+
+    }
 }

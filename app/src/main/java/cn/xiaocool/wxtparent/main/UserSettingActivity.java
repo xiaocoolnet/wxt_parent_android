@@ -173,11 +173,14 @@ public class UserSettingActivity extends BaseActivity implements View.OnClickLis
                 break;
             //版本更新
             case R.id.rl_version:
-                if(Integer.parseInt(versionId)<Integer.parseInt(newId)){
-                    chechVersion();
-                }else{
-                    ToastUtils.ToastShort(mContext,"当前版本是最新版本！");
+                if (newId!=null){
+                    if(Integer.parseInt(versionId)<Integer.parseInt(newId)){
+                        chechVersion();
+                    }else{
+                        ToastUtils.ToastShort(mContext,"当前版本是最新版本！");
+                    }
                 }
+
                 break;
         }
     }

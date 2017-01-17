@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/main_ground_color"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_space_click_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.xiaocool.wxtparent.main.SpaceClickGroupActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dip">
-
+        android:layout_height="50dip" >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/title_bg_color"
             android:gravity="center"
-            android:text="宝宝视频"
+            android:text="成长档案"
             android:textColor="@color/whilte"
             android:textSize="20sp" />
 
@@ -22,24 +23,22 @@
             android:id="@+id/up_jiantou"
             android:layout_width="50dip"
             android:layout_height="fill_parent"
-            android:gravity="center">
+            android:gravity="center" >
 
             <ImageView
-                android:id="@+id/me_help_setting_back"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_fanhui" />
+                android:src="@drawable/ic_fanhui"
+                android:id="@+id/btn_exit" />
         </RelativeLayout>
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/lv_device"
+    <ExpandableListView
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-
-    </ListView>
-
-
+        android:divider="@color/zsq_bg_color"
+        android:dividerHeight="0.5dp">
+    </ExpandableListView>
 </LinearLayout>

@@ -46,6 +46,7 @@ import cn.xiaocool.wxtparent.main.SpaceClickAttendanceActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickClassActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickClassEventActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickConfimActivity;
+import cn.xiaocool.wxtparent.main.SpaceClickGroupActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickHeightActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickLeaveActivity;
 import cn.xiaocool.wxtparent.main.SpaceClickNewsActivity;
@@ -285,7 +286,7 @@ public class SpaceFragment extends Fragment implements View.OnClickListener {
     private ImageView baby_imgae;
     private TextView baby_class;
     private TextView baby_name;
-    private ImageView baby_sex;
+    private ImageView baby_sex,func_shipin_bg;
     private TextView baby_school_name;
     private RelativeLayout space_friends;
     private RelativeLayout space_parents,space_check;
@@ -426,6 +427,8 @@ public class SpaceFragment extends Fragment implements View.OnClickListener {
         classevents = (RelativeLayout) getView().findViewById(R.id.space_activity);
         classevents.setOnClickListener(this);
 
+        func_shipin_bg = (ImageView) getView().findViewById(R.id.func_shipin_bg);
+        func_shipin_bg.setOnClickListener(this);
 
         //校网   （原来的宝宝乐园）
         space_park = (RelativeLayout) getView().findViewById(R.id.space_park);
@@ -651,7 +654,12 @@ public class SpaceFragment extends Fragment implements View.OnClickListener {
                 break;
             //成长档案
             case R.id.space_files:
-                ToastUtils.ToastShort(mContext,"该功能尚未上线！");
+                IntentUtils.getIntent(mContext, SpaceClickGroupActivity.class);
+//                ToastUtils.ToastShort(mContext,"该功能尚未上线！");
+                break;
+            case R.id.func_shipin_bg:
+                Intent copyintent = new Intent(mContext, DeviceInfoListActivity.class);
+                startActivity(copyintent);
                 break;
             default:
                 break;

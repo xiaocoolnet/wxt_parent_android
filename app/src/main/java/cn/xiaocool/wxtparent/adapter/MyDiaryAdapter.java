@@ -129,7 +129,9 @@ public class MyDiaryAdapter extends BaseAdapter {
         }else{
             holder.homework_content.setText(homeworkDataList.get(position).getMatter());
             Date date = new Date();
-            date.setTime(Long.parseLong(homeworkDataList.get(position).getAddtime()) * 1000);
+            if (homeworkDataList.get(position).getAddtime()!=null){
+                date.setTime(Long.parseLong(homeworkDataList.get(position).getAddtime()) * 1000);
+            }
             //判断当天
             String section = getSectionForPosition(position);
             if (position == getPositionForSection(section)) {

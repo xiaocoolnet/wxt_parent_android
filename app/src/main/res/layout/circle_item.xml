@@ -125,7 +125,7 @@
             android:listSelector="@color/white"
             android:numColumns="3"
             android:stretchMode="columnWidth"
-            android:horizontalSpacing="@dimen/activity_size_10"
+            android:horizontalSpacing="10dp"
             android:verticalSpacing="10dp"></cn.xiaocool.wxtparent.ui.NoScrollGridView>
     </RelativeLayout>
 

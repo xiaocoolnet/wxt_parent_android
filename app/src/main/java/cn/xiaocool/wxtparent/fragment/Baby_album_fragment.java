@@ -46,7 +46,7 @@ public class Baby_album_fragment extends Fragment implements View.OnClickListene
     private LinearLayout commentView;
     private ListView lv;
     private ArrayList<ClassCricleInfo> CricleList = new ArrayList<>();
-    private AlbumListAdapter mAdapter;
+    public AlbumListAdapter mAdapter;
     private Context mContext;
     private UserInfo userInfo;
     private static final int HOMEWORK_PRAISE_KEY = 104;

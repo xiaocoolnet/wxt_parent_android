@@ -68,7 +68,7 @@ public class FriendDiaryAdapter extends BaseAdapter {
     private static long lastClickTime;
     private DisplayImageOptions displayImage;
     private ArrayList<Comments> comment;
-    private CommentPopupWindow commentPopupWindow;
+    public CommentPopupWindow commentPopupWindow;
     private UserInfo user;
     public FriendDiaryAdapter(List<ClassCricleInfo> homeworkDataList, Context mContext, Handler handler, LinearLayout commentView, String type) {
         this.context = mContext;

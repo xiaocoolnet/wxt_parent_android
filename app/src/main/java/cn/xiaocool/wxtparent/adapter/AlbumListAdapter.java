@@ -65,7 +65,7 @@ public class AlbumListAdapter extends BaseAdapter {
     private static final int DEL_HOMEWORK_PRAISE_KEY = 105;
     private DisplayImageOptions displayImage;
     private ArrayList<Comments> comment;
-    private CommentPopupWindow commentPopupWindow;
+    public CommentPopupWindow commentPopupWindow;
 
     private UserInfo user;
     //    private int a;
