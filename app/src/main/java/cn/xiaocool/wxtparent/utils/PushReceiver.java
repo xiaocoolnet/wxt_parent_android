@@ -43,13 +43,17 @@ public class PushReceiver extends BroadcastReceiver {
         String str = "";
         String recid = "";
         String usertype = "";
+        String chattype = "";
         String loginOther = "";
         try {
             JSONObject jsonObject = new JSONObject(type);
             str = jsonObject.getString("type");
+            recid = jsonObject.getString("txt");
             loginOther = str;
-            if (str.equals("newMessage")){
-                recid = jsonObject.getString("txt");
+            if (str.equals("qchat")){
+                chattype = "1";
+            }else if (str.equals("chat")){
+                chattype = "0";
             }
         } catch (JSONException e) {
             Log.i(TAG, "JSONException" + type);
@@ -149,11 +153,12 @@ public class PushReceiver extends BroadcastReceiver {
                     Intent i = new Intent(context, SpaceClickTeacherReviewActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
                     context.startActivity(i);
-                }else if (str.equals("newMessage")){
+                }else if (str.equals("chat")||str.equals("qchat")){
                     Intent i = new Intent(context, TeacherCommunicationActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
                     i.putExtra("reciver_id",recid);
                     i.putExtra("usertype","1");
+                    i.putExtra("type",chattype);
                     context.startActivity(i);
                 }
 

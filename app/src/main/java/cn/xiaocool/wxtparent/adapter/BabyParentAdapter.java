@@ -72,7 +72,7 @@ public class BabyParentAdapter extends BaseAdapter {
         }else if(hashMapList.get(position).getType().equals("0")){
             holder.iv_main.setVisibility(View.GONE);
         }
-        holder.tv_name.setText(hashMapList.get(position).getAppellation());
+        holder.tv_name.setText(hashMapList.get(position).getName()+"（"+hashMapList.get(position).getAppellation()+"）");
         holder.tv_className.setText(hashMapList.get(position).getPhone());
         imageLoader.displayImage(NetBaseConstant.NET_CIRCLEPIC_HOST + hashMapList.get(position).getPhoto(), holder.iv_avator);
         convertView.setOnClickListener(new View.OnClickListener() {

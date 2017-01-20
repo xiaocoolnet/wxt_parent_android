@@ -31,7 +31,7 @@ import cn.xiaocool.wxtparent.view.WxtApplication;
 
 public class TeacherInfoWebDetailActivity extends BaseActivity {
 
-    private String itemid, title,type,content;
+    private String itemid, title,type,content,url;
     private TextView title_bar_name;
     private WebView webView;
     private ImageView btn_exit;
@@ -117,11 +117,17 @@ public class TeacherInfoWebDetailActivity extends BaseActivity {
 
 
         if (type.equals("9")){
-            webView.loadUrl("http://wxt.xiaocool.net/index.php?g=portal&m=article&a=system&id="+itemid);
+            url = "http://wxt.xiaocool.net/index.php?g=portal&m=article&a=system&id="+itemid;
+            webView.loadUrl(url);
         }else {
-            webView.loadUrl(NetBaseConstant.NET_H5_HOST + "&a="+a+"&id="+itemid);
+            url = NetBaseConstant.NET_H5_HOST + "&a="+a+"&id="+itemid;
+            webView.loadUrl(url);
         }
 
+        if (type.equals("10")){
+            url = getIntent().getStringExtra("url");
+            webView.loadUrl(url);
+        }
         webView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
@@ -150,7 +156,7 @@ public class TeacherInfoWebDetailActivity extends BaseActivity {
     private void shareWX() {
         //创建一个WXWebPageObject对象，用于封装要发送的Url
         WXWebpageObject webpage =new WXWebpageObject();
-        webpage.webpageUrl=NetBaseConstant.NET_H5_HOST + "&a="+a+"&id="+itemid;
+        webpage.webpageUrl=url;
         WXMediaMessage msg =new WXMediaMessage(webpage);
         msg.title=title;
         msg.description=content;

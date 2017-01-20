@@ -17,10 +17,22 @@ android {
             abiFilters 'armeabi','armeabi-v7a'
         }
     }
+    signingConfigs {
+        config {
+            keyAlias 'wxt_parent'
+            keyPassword 'love@1314'
+            storeFile file('/Users/xiaocool/Desktop/android/wxt_parent_android/app/wxt_parent_sign.jks')
+            storePassword 'love@1314'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
     sourceSets {
