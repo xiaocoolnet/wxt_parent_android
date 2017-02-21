@@ -61,9 +61,9 @@ public class Tongxunlu_parent_fragment extends Fragment {
                                 parentInfoBeans.add(parentInfoBean);
                             }
                             stuParent.setParent_info(parentInfoBeans);
-                            if(!userInfo.getChildId().equals(itemObject.optString("id"))){
+//                            if(!userInfo.getChildId().equals(itemObject.optString("id"))){
                                 stuParents.add(stuParent);
-                            }
+//                            }
                         }
                         adapter = new StuParentAdapter(context, stuParents);
                         list.setAdapter(adapter);

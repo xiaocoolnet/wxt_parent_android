@@ -53,7 +53,7 @@ public class WxtApplication extends Application {
     public IWXAPI api; //第三方app与微信通信的openapi接口
     private SQLiteDatabase db;  //数据库对象
     private ArrayList<Address> usersinfos = new ArrayList<>();
-    public static final String APP_ID = "wx1929ca4290231712";
+    public static final String APP_ID = "wx9bbf627591adbedc";
     //环信注册
     //萤石云
     public static String EZ_APP_KEY = "e6a9eb61e34d4b64a6a1d92867914d9c";
